@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Devi's DM Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+  	<script src="sim/datascript-0.18.4.min.js" defer></script>
+  	<script src="sim/data/cast.js" defer></script>
+  	<script src="sim/data/rumors.js" defer></script>
+  	<script src="sim/data/locations.js" type="module" defer></script>
+  	<script src="sim/data/complaints.js" defer></script>
+  	<script src="sim/data/investigations.js" defer></script>
+	<script src="sim/util.js" defer></script>
+	<script src="sim/felt.js" defer></script>
+	<script src="sim/sim.js" defer></script>
+	<script src="sim/actions.js" defer></script>
+	<script src="sim/effects.js" defer></script>
+	<script src="sim/effects_max.js" defer></script>
+	<script src="sim/effects_mel.js" defer></script>
+	<script src="sim/siftpatterns.js" defer></script>
+	<script src="core.min.js"></script>
+	<script src="main.js" defer></script>
+	<script src="mermaid.min.js"></script>
+	<script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+<body>
+	<main> 
+			<div class="row">
+				<div class="column">
+					<div class="character-wrapper">
+						<div><strong>List of characters:</strong></div><br>
+						<div id="characterList">text</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="location-wrapper">
+						<div><strong>List of locations:</strong></div><br>
+						<div id="locationList">text</div>
+					</div>
+				</div>
+			</div>
+			<div class="mermaid">
+			    graph LR
+			    	0[The Stonehill Inn]-->ToblenStonehill[Toblen Stonehill]
+					0[The Stonehill Inn]-->Narth[Narth]
+					0[The Stonehill Inn]-->Elsa[Elsa]
+					0[The Stonehill Inn]-->Lanar[Lanar]
+					0[The Stonehill Inn]-->Trilena[Trilena]
+					0[The Stonehill Inn]-->Pip[Pip]
+					0[The Stonehill Inn]-->Freda[Freda]
+					1[Lionshield Coster]-->LineneGraywind[Linene Graywind]
+					2[Barthen's Provisions]-->ElmarBarthen[Elmar Barthen]
+					2[Barthen's Provisions]-->Ander[Ander]
+					2[Barthen's Provisions]-->Thistle[Thistle]
+					3[Townmaster's Hall]-->HarbinWester[Harbin Wester]
+					4[Shrine of Luck]-->SisterGaraele[Sister Garaele]
+					5[Sleeping Giant tap house]-->Grista[Grista]
+					5[Sleeping Giant tap house]-->Redbrandthugs[Redbrand thugs]
+					6[Edermath Orchard]-->DaranEdermath[Daran Edermath]
+					9[Phandalin Miner's Exchange]-->HaliaThornton[Halia Thornton]
+					10[Alderleaf Farm]-->QellineAlderleaf[Qelline Alderleaf]
+					10[Alderleaf Farm]-->Carp[Carp]
+
+			</div>
+	</main>
+</body>
+</html>
