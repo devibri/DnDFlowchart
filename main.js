@@ -66,8 +66,14 @@ function writeLocation(i, locations) {
   var name = locations[i].fields.name;
   var npcs = locations[i].fields.NPCs;
   for (let j = 0; j <= npcs.length; j++){
-    //process.stdout.write(tag + "[" + name + "]-->" + npcs[j] + "(" + npcs[j] + ")\n");
-    //setTimeout (console.log.bind (console, tag + "[" + name + "]-->" + npcs[j] + "(" + npcs[j] + ")\n"));
+    if (npcs === undefined || npcs.length == 0){
+      //do nothing
+    } else {
+      setTimeout (console.log.bind (console, tag + "[" + name + "]-->" + npcs[j] + "(" + npcs[j] + ")\n"));
+      return;
+    }
+    setTimeout (console.log.bind (console, tag + "[" + name + "]"));
+    return;
   }  
 }
 
