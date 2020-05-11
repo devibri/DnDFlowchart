@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+console.log("help");
+
 //remove old contents of file
 fs.writeFile('output.txt', '', function(){console.log('done')})
 
@@ -7,7 +9,6 @@ fs.writeFile('output.txt', '', function(){console.log('done')})
 var file = require('./locations.js')
 
 //Add locations for each of the locations
-console.log("now parsing...");
 const locations = JSON.parse(file.json_locations);
 
 for (let i = 0; i < locations.length; i++){ 

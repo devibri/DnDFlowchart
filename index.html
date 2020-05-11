@@ -7,7 +7,7 @@
   	<script src="sim/datascript-0.18.4.min.js" defer></script>
   	<script src="sim/data/cast.js" defer></script>
   	<script src="sim/data/rumors.js" defer></script>
-  	<script src="sim/data/locations.js" type="module" defer></script>
+  	<script src="sim/data/locations.js" defer></script>
   	<script src="sim/data/complaints.js" defer></script>
   	<script src="sim/data/investigations.js" defer></script>
 	<script src="sim/util.js" defer></script>
@@ -20,7 +20,7 @@
 	<script src="sim/siftpatterns.js" defer></script>
 	<script src="core.min.js"></script>
 	<script src="main.js" defer></script>
-	<script src="mermaid.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
 	<script>mermaid.initialize({startOnLoad:true});</script>
 </head>
 <body>
@@ -41,25 +41,11 @@
 			</div>
 			<div class="mermaid">
 			    graph LR
-			    	0[The Stonehill Inn]-->ToblenStonehill[Toblen Stonehill]
-					0[The Stonehill Inn]-->Narth[Narth]
-					0[The Stonehill Inn]-->Elsa[Elsa]
-					0[The Stonehill Inn]-->Lanar[Lanar]
-					0[The Stonehill Inn]-->Trilena[Trilena]
-					0[The Stonehill Inn]-->Pip[Pip]
-					0[The Stonehill Inn]-->Freda[Freda]
-					1[Lionshield Coster]-->LineneGraywind[Linene Graywind]
-					2[Barthen's Provisions]-->ElmarBarthen[Elmar Barthen]
-					2[Barthen's Provisions]-->Ander[Ander]
-					2[Barthen's Provisions]-->Thistle[Thistle]
-					3[Townmaster's Hall]-->HarbinWester[Harbin Wester]
-					4[Shrine of Luck]-->SisterGaraele[Sister Garaele]
-					5[Sleeping Giant tap house]-->Grista[Grista]
-					5[Sleeping Giant tap house]-->Redbrandthugs[Redbrand thugs]
-					6[Edermath Orchard]-->DaranEdermath[Daran Edermath]
-					9[Phandalin Miner's Exchange]-->HaliaThornton[Halia Thornton]
-					10[Alderleaf Farm]-->QellineAlderleaf[Qelline Alderleaf]
-					10[Alderleaf Farm]-->Carp[Carp]
+			    	StonehillInn[The Stonehill Inn]-->ToblenStonehill(Toblen Stonehill)
+					StonehillInn[The Stonehill Inn]-->Narth(Narth)
+					StonehillInn[The Stonehill Inn]-->Elsa(Elsa)
+					StonehillInn[The Stonehill Inn]-->Lanar(Lanar)
+
 
 			</div>
 	</main>

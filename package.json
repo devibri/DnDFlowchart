@@ -1,0 +1,22 @@
+{
+  "name": "dndflowchart",
+  "version": "1.0.0",
+  "description": "This project is a digital assistant that helps provide creative prompts for game masters running tabletop roleplaying games. It currently uses the cast and characters from the D&D 5e scenario *The Lost Mine of Phandelver*, in particular Parts 2 and 3 of the module.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacharya64/DnDFlowchart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dacharya64/DnDFlowchart/issues"
+  },
+  "homepage": "https://github.com/dacharya64/DnDFlowchart#readme",
+  "dependencies": {
+    "browserify-fs": "^1.0.0"
+  }
+}

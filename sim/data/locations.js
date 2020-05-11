@@ -4,7 +4,7 @@ var json_locations = `[
     "fields": {
       "name": "The Stonehill Inn", 
       "state": "undiscovered",
-      "NPCs": ["Toblen Stonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"]
+      "NPCs": ["ToblenStonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"]
     }
   },
   {
@@ -128,9 +128,3 @@ var json_locations = `[
     } 
   }
 ]`
-
-//export default { json_locations: json_locations }
-//module.exports = json_locations;
-module.exports = {
-  json_locations
-}
