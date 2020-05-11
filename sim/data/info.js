@@ -1,11 +1,12 @@
-[
+var json_info = `[
   {
     "tag": "ToblinStonehill",
     "fields": {
       "name": "Toblin Stonehill",
       "occupation": "Innkeeper",
       "faction": "none",
-      "status": "alive"
+      "status": "alive", 
+      "info": []
     }
   },
   {
@@ -14,7 +15,8 @@
       "name": "Elmar Barthen",
       "occupation": "Owns trading post",
       "faction": "none",
-      "status": "alive"
+      "status": "alive",
+      "info": []
     }
   },
   {
@@ -97,5 +99,68 @@
   "faction": "Redbrands",
   "status": "alive"
   }
+},
+{
+ "tag": "Elsa",
+ "fields": {
+  "name": "Elsa",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Lanar",
+ "fields": {
+  "name": "Lanar",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Trilena",
+ "fields": {
+  "name": "Trilena",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Pip",
+ "fields": {
+  "name": "Pip",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Freda",
+ "fields": {
+  "name": "Freda",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Ander",
+ "fields": {
+  "name": "Ander",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Thistle",
+ "fields": {
+  "name": "Thistle",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Grista",
+ "fields": {
+  "name": "Grista",
+  "status": "alive"
+  }
+},
+{
+ "tag": "Carp",
+ "fields": {
+  "name": "Carp",
+  "status": "alive"
+  }
 }
-]
+]`

@@ -62,19 +62,24 @@ function writeToConsole() {
 }
 
 function writeLocation(i, locations) {
+  // Get location info
   var tag = locations[i].tag;
   var name = locations[i].fields.name;
   var npcs = locations[i].fields.NPCs;
+
+  // Check if there are NPCs at location, if so add them as connected nodes 
   for (let j = 0; j < npcs.length; j++){
+    // If there are no NPCs, just print the location as a node
     if (npcs === undefined || npcs.length == 0){
       setTimeout (console.log.bind (console, tag + "[" + name + "]"));
       return;
+      // Otherwise print the location with the relevant NPC(s) attached as nodes
     } else {
-      setTimeout (console.log.bind (console, tag + "[" + name + "]-->" + npcs[j] + "(" + npcs[j] + ")\n"));
+      setTimeout (console.log.bind (console, tag + "[" + name + "]-->" + npcs[j] + "(" + Sim.getCharacterNameByTag(npcs[j])  + ")\n"));
     }
   }  
 }
 
-renderNames();
-renderLocations();
+//renderNames();
+//renderLocations();
 writeToConsole();

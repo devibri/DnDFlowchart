@@ -4,7 +4,7 @@ var json_locations = `[
     "fields": {
       "name": "The Stonehill Inn", 
       "state": "undiscovered",
-      "NPCs": ["ToblenStonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"]
+      "NPCs": ["ToblinStonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"]
     }
   },
   {
@@ -12,7 +12,7 @@ var json_locations = `[
     "fields": {
       "name": "Lionshield Coster", 
       "state": "undiscovered",
-      "NPCs": ["Linene Graywind"]
+      "NPCs": ["LineneGraywind"]
     }
   },
   {
@@ -20,7 +20,7 @@ var json_locations = `[
     "fields": {
       "name": "Barthen's Provisions", 
       "state": "undiscovered",
-      "NPCs": ["Elmar Barthen", "Ander", "Thistle"]
+      "NPCs": ["ElmarBarthen", "Ander", "Thistle"]
     }
   },
   {
@@ -28,7 +28,7 @@ var json_locations = `[
     "fields": {
       "name": "Townmaster's Hall", 
       "state": "undiscovered",
-      "NPCs": ["Harbin Wester"]
+      "NPCs": ["HarbinWester"]
     }
   },
   {
@@ -36,7 +36,7 @@ var json_locations = `[
     "fields": {
       "name": "Shrine of Luck", 
       "state": "undiscovered",
-      "NPCs": ["Sister Garaele"]
+      "NPCs": ["SisterGaraele"]
     }
   },
   {
@@ -44,7 +44,7 @@ var json_locations = `[
     "fields": {
       "name": "Sleeping Giant tap house", 
       "state": "undiscovered",
-      "NPCs": ["Grista", "Redbrand thugs"]
+      "NPCs": ["Grista", "TheRedbrands"]
     }
   },
   {
@@ -52,7 +52,7 @@ var json_locations = `[
     "fields": {
       "name": "Edermath Orchard", 
       "state": "undiscovered",
-      "NPCs": ["Daran Edermath"]
+      "NPCs": ["DarenEdermath"]
     }
   },
   {
@@ -76,7 +76,7 @@ var json_locations = `[
     "fields": {
       "name": "Phandalin Miner's Exchange", 
       "state": "undiscovered",
-      "NPCs": ["Halia Thornton"]
+      "NPCs": ["HaliaThornton"]
     }
   },
   {
@@ -84,7 +84,7 @@ var json_locations = `[
     "fields": {
       "name": "Alderleaf Farm", 
       "state": "undiscovered",
-      "NPCs": ["Qelline Alderleaf", "Carp"]
+      "NPCs": ["QellineAlderleaf", "Carp"]
     }
   },
   {

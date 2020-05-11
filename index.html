@@ -2,30 +2,27 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Devi's DM Assistant</title>
+	<title>Devi's GM Assistant</title>
   <link rel="stylesheet" href="styles.css">
   	<script src="sim/datascript-0.18.4.min.js" defer></script>
   	<script src="sim/data/cast.js" defer></script>
-  	<script src="sim/data/rumors.js" defer></script>
+  	<script src="sim/data/info.js" defer></script>
   	<script src="sim/data/locations.js" defer></script>
-  	<script src="sim/data/complaints.js" defer></script>
-  	<script src="sim/data/investigations.js" defer></script>
 	<script src="sim/util.js" defer></script>
-	<script src="sim/felt.js" defer></script>
 	<script src="sim/sim.js" defer></script>
-	<script src="sim/actions.js" defer></script>
-	<script src="sim/effects.js" defer></script>
-	<script src="sim/effects_max.js" defer></script>
-	<script src="sim/effects_mel.js" defer></script>
-	<script src="sim/siftpatterns.js" defer></script>
 	<script src="core.min.js"></script>
 	<script src="main.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
-	<script>mermaid.initialize({startOnLoad:true});</script>
+	<script>
+	  var config = {
+	    theme:'neutral',
+	  };
+	  mermaid.initialize(config);
+	</script>
 </head>
 <body>
 	<main> 
-			<div class="row">
+			<<!-- div class="row">
 				<div class="column">
 					<div class="character-wrapper">
 						<div><strong>List of characters:</strong></div><br>
@@ -38,15 +35,46 @@
 						<div id="locationList">text</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="mermaid">
 			    graph LR
-			    	StonehillInn[The Stonehill Inn]-->ToblenStonehill(Toblen Stonehill)
+			    	StonehillInn[The Stonehill Inn]-->ToblinStonehill(Toblin Stonehill)
+
 					StonehillInn[The Stonehill Inn]-->Narth(Narth)
+
 					StonehillInn[The Stonehill Inn]-->Elsa(Elsa)
+
 					StonehillInn[The Stonehill Inn]-->Lanar(Lanar)
 
+					StonehillInn[The Stonehill Inn]-->Trilena(Trilena)
 
+					StonehillInn[The Stonehill Inn]-->Pip(Pip)
+
+					StonehillInn[The Stonehill Inn]-->Freda(Freda)
+
+					LionshieldCoster[Lionshield Coster]-->LineneGraywind(Linene Graywind)
+
+					BarthensProvisions[Barthen's Provisions]-->ElmarBarthen(Elmar Barthen)
+
+					BarthensProvisions[Barthen's Provisions]-->Ander(Ander)
+
+					BarthensProvisions[Barthen's Provisions]-->Thistle(Thistle)
+
+					TownmastersHall[Townmaster's Hall]-->HarbinWester(Harbin Wester)
+
+					ShrineOfLuck[Shrine of Luck]-->SisterGaraele(Sister Garaele)
+
+					SleepingGiant[Sleeping Giant tap house]-->Grista(Grista)
+
+					SleepingGiant[Sleeping Giant tap house]-->TheRedbrands(The Redbrand Gang)
+
+					EdermathOrchard[Edermath Orchard]-->DarenEdermath(Daren Edermath)
+
+					PhandalinMiners[Phandalin Miner's Exchange]-->HaliaThornton(Halia Thorton)
+
+					AlderleafFarm[Alderleaf Farm]-->QellineAlderleaf(Qelline Alderleaf)
+
+					AlderleafFarm[Alderleaf Farm]-->Carp(Carp)
 			</div>
 	</main>
 </body>

@@ -53,7 +53,7 @@ function getLocationNPCsByName(db, name) {
 }
 
 function getCharacterNameByTag(db, tag) {
-  return datascript.q(`[:find ?o :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "name" ?o]]`, db);
+  return datascript.q(`[:find ?n :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "name" ?n]]`, db);
 }
 
 
