@@ -1,166 +1,122 @@
 var json_info = `[
   {
-    "tag": "ToblinStonehill",
+    "tag": "RedbrandHideoutLocation",
     "fields": {
-      "name": "Toblin Stonehill",
-      "occupation": "Innkeeper",
-      "faction": "none",
-      "status": "alive", 
-      "info": []
+      "text": "The Redbrand hideout is at Tresendar Manor",
+      "known": "false"
     }
   },
   {
-    "tag": "ElmarBarthen",
+    "tag": "SecretTunnelLocation",
     "fields": {
-      "name": "Elmar Barthen",
-      "occupation": "Owns trading post",
-      "faction": "none",
-      "status": "alive",
-      "info": []
+      "text": "The Redbrand hideout has a secret tunnel entrance located here",
+      "known": "false"
     }
   },
   {
-    "tag": "DarenEdermath",
+    "tag": "SecretTunnelKnowledge",
     "fields": {
-      "name": "Daren Edermath",
-      "occupation": "none",
-      "faction": "Order of the Gauntlet",
-      "status": "alive"
+      "text": "Carp saw a secret tunnel in the woods; the Redbrands almost caught him",
+      "known": "false"
     }
   },
   {
-    "tag": "LineneGraywind",  
+    "tag": "OrcsTriboarTrail",
     "fields": {
-      "name": "Linene Graywind",
-      "occupation": "Runs trading post",
-      "faction": "none",
-      "status": "alive"
+      "text": "The townmaster wants someone to deal with the orcs around Triboar Trail",
+      "known": "false",
+      "locations": ["TriboarTrail"]
     }
-  }, 
+  },
   {
-    "tag": "HaliaThornton",
+    "tag": "DendrarFamilyKidnapped",
     "fields": {
-      "name": "Halia Thorton",
-      "occupation": "none",
-      "faction": "Zhentarim",
-      "status": "alive"
+      "text": "Thal Dendrar stood up to Redbrands; they killed him and kidnapped his family",
+      "known": "false"
     }
-  },  
+  },
   {
-    "tag": "QellineAlderleaf",
+    "tag": "RedbrandsAndHalia",
     "fields": {
-      "name": "Qelline Alderleaf",
-      "occupation": "Halfling farmer",
-      "faction": "none",
-      "status": "alive"
+      "text": "Redbrands don't mess with Halia at Phandalin Miner's Exchange",
+      "known": "false"
     }
-  },  
+  },
   {
-   "tag": "SisterGaraele",
-   "fields": {
-    "name": "Sister Garaele",
-    "occupation": "Elf cleric of Tymora",
-    "faction": "Harper",
-    "status": "alive"
-  }
-},  
-{
- "tag": "HarbinWester",
- "fields": {
-  "name": "Harbin Wester",
-  "occupation": "Townmaster of Phandalin",
-  "faction": "none",
-  "status": "alive"
-  }
-},  
-{
- "tag": "SildarHallwinter",
- "fields": {
-  "name": "Sildar Hallwinter",
-  "occupation": "none",
-  "faction": "Lords' Alliance",
-  "status": "alive"
-  }
-}, 
-{
- "tag": "Narth",
- "fields": {
-  "name": "Narth",
-  "occupation": "Farmer",
-  "faction": "none",
-  "status": "alive"
-  }
-},
-{
- "tag": "TheRedbrands",
- "fields": {
-  "name": "The Redbrand Gang",
-  "occupation": "none",
-  "faction": "Redbrands",
-  "status": "alive"
-  }
-},
-{
- "tag": "Elsa",
- "fields": {
-  "name": "Elsa",
-  "status": "alive"
-  }
-},
-{
- "tag": "Lanar",
- "fields": {
-  "name": "Lanar",
-  "status": "alive"
-  }
-},
-{
- "tag": "Trilena",
- "fields": {
-  "name": "Trilena",
-  "status": "alive"
-  }
-},
-{
- "tag": "Pip",
- "fields": {
-  "name": "Pip",
-  "status": "alive"
-  }
-},
-{
- "tag": "Freda",
- "fields": {
-  "name": "Freda",
-  "status": "alive"
-  }
-},
-{
- "tag": "Ander",
- "fields": {
-  "name": "Ander",
-  "status": "alive"
-  }
-},
-{
- "tag": "Thistle",
- "fields": {
-  "name": "Thistle",
-  "status": "alive"
-  }
-},
-{
- "tag": "Grista",
- "fields": {
-  "name": "Grista",
-  "status": "alive"
-  }
-},
-{
- "tag": "Carp",
- "fields": {
-  "name": "Carp",
-  "status": "alive"
-  }
-}
+    "tag": "RedbrandHangout",
+    "fields": {
+      "text": "Redbrands hang out at Sleeping Giant Tap House and they are trouble",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "SisterGaraeleExhausted",
+    "fields": {
+      "text": "Sister Garaele recently returned to the Shrine of Luck injured and exhausted",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "GoblinCragmawCastle",
+    "fields": {
+      "text": "The goblin working for the Redbrands might know the way to Cragmaw Castle (will leverage this info to get players to accept her quest)",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "KillRedbrandLeader",
+    "fields": {
+      "text": "QUEST: Kill the leader of the Redbrands (secret -- so Halia can take over)",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "GetRidOfRedbrands",
+    "fields": {
+      "text": "Wants players to take out Redbrands",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "DiggingOldOwlWell",
+    "fields": {
+      "text": "QUEST: There is undead and digging at Old Owl Well, used to be magical, want someone to investigate",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "AskAgathaAboutBook",
+    "fields": {
+      "text": "QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "MissingIarno",
+    "fields": {
+      "text": "Looking for missing member of order, Iarno (secretly new leader of Redbrands)",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "TownmasterAndRedbrands",
+    "fields": {
+      "text": "Townmaster doesn't want players to mess with Redbrands, keep them in jail",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "RedbrandShakedown",
+    "fields": {
+      "text": "The Redbrands are shaking down local businesses",
+      "known": "false"
+    }
+  },
+  {
+    "tag": "RedbrandShakedown",
+    "fields": {
+      "text": "A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree",
+      "known": "false"
+    }
+  },
 ]`

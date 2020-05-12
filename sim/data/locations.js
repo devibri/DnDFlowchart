@@ -3,7 +3,7 @@ var json_locations = `[
     "tag": "StonehillInn", 
     "fields": {
       "name": "The Stonehill Inn", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["ToblinStonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"]
     }
   },
@@ -11,7 +11,7 @@ var json_locations = `[
     "tag": "LionshieldCoster", 
     "fields": {
       "name": "Lionshield Coster", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["LineneGraywind"]
     }
   },
@@ -19,7 +19,7 @@ var json_locations = `[
     "tag": "BarthensProvisions", 
     "fields": {
       "name": "Barthen's Provisions", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["ElmarBarthen", "Ander", "Thistle"]
     }
   },
@@ -27,7 +27,7 @@ var json_locations = `[
     "tag": "TownmastersHall", 
     "fields": {
       "name": "Townmaster's Hall", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["HarbinWester"]
     }
   },
@@ -35,15 +35,15 @@ var json_locations = `[
     "tag": "ShrineOfLuck", 
     "fields": {
       "name": "Shrine of Luck", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["SisterGaraele"]
     }
   },
   {
-    "tag": "SleepingGiant", 
+    "tag": "SleepingGiantTapHouse", 
     "fields": {
       "name": "Sleeping Giant tap house", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["Grista", "TheRedbrands"]
     }
   },
@@ -51,7 +51,7 @@ var json_locations = `[
     "tag": "EdermathOrchard", 
     "fields": {
       "name": "Edermath Orchard", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["DarenEdermath"]
     }
   },
@@ -59,7 +59,7 @@ var json_locations = `[
     "tag": "TresendarManor", 
     "fields": {
       "name": "Tresendar Manor", 
-      "state": "undiscovered",
+      "known": false,
       "NPCs": []
     }
   },
@@ -67,15 +67,15 @@ var json_locations = `[
     "tag": "OldOwlWell", 
     "fields": {
       "name": "Old Owl Well", 
-      "state": "undiscovered",
+      "known": false,
       "NPCs": []
     }
   },
   {
-    "tag": "PhandalinMiners", 
+    "tag": "PhandalinMinersExchange", 
     "fields": {
       "name": "Phandalin Miner's Exchange", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["HaliaThornton"]
     }
   },
@@ -83,7 +83,7 @@ var json_locations = `[
     "tag": "AlderleafFarm", 
     "fields": {
       "name": "Alderleaf Farm", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": ["QellineAlderleaf", "Carp"]
     }
   },
@@ -91,7 +91,7 @@ var json_locations = `[
     "tag": "Thundertree", 
     "fields": {
       "name": "Thundertree", 
-      "state": "undiscovered",
+      "known": false,
       "NPCs": []
     }
   },
@@ -99,7 +99,7 @@ var json_locations = `[
     "tag": "AgathasLair", 
     "fields": {
       "name": "Agatha's Lair", 
-      "state": "undiscovered",
+      "known": false,
       "NPCs": []
     }
   },
@@ -107,7 +107,7 @@ var json_locations = `[
     "tag": "TriboarTrail", 
     "fields": {
       "name": "Triboar Trail", 
-      "state": "undiscovered",
+      "known": true,
       "NPCs": []
     }
   },
@@ -115,7 +115,7 @@ var json_locations = `[
     "tag": "CragmawCastle", 
     "fields": {
       "name": "Cragmaw Castle", 
-      "state": "undiscovered",
+      "known": false,
       "NPCs": []
     }
   },
@@ -123,7 +123,7 @@ var json_locations = `[
     "tag": "WaveEchoCave", 
     "fields": {
       "name": "Wave Echo Cave", 
-      "state": "undiscovered",
+      "known": false,
       "NPCs": []
     } 
   }

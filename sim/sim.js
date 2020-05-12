@@ -45,7 +45,7 @@ function getCharacterStatusByName(db, name) {
 }
 
 function getLocationStateByName(db, name) {
-  return datascript.q(`[:find ?o :where [?c "type" "loc"] [?c "name" "${name}"] [?c "state" ?o]]`, db);
+  return datascript.q(`[:find ?o :where [?c "type" "loc"] [?c "name" "${name}"] [?c "known" ?o]]`, db);
 }
 
 function getLocationNPCsByName(db, name) {
@@ -78,7 +78,7 @@ function generateLocation(db, i, locations) {
     type: 'loc', 
     tag: `${location.tag}`,
     name: `${location.fields.name}`, 
-    state: `${location.fields.state}`,
+    known: `${location.fields.known}`,
     NPCs: `${location.fields.NPCs}`
   }
   return createEntity(db, entity);
