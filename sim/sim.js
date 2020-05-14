@@ -98,7 +98,8 @@ function generateInfo(db, i, infoObjects) {
     type: 'info', 
     tag: `${info.tag}`,
     text: `${info.fields.text}`, 
-    known: `${info.fields.known}`
+    known: `${info.fields.known}`,
+    locations: `${info.fields.locations}`
   }
   return createEntity(db, entity);
 }
