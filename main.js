@@ -66,25 +66,45 @@ function writeLocation(i, locations) {
   var tag = locations[i].tag;
   var name = locations[i].fields.name;
   var npcs = locations[i].fields.NPCs;
-  
   var npc;
 
   var log = tag + "[" + name + "]";
 
   if (npcs.length == 0){
-      setTimeout (console.log.bind (console, log));
-      return;
+     setTimeout (console.log.bind (console, log));
+     return;
+  } else { // Otherwise there are NPCs at location, add them as connected nodes 
+    for (let j = 0; j < npcs.length; j++){
+      var log = tag + "[" + name + "]"; //need to reset log
+      npc = npcs[j]
+      writeCharacter(npc, log);
     }
+  } 
+}
 
-  // Otherwise there are NPCs at location, add them as connected nodes 
-  for (let j = 0; j < npcs.length; j++){
-      var log = tag + "[" + name + "]";
-      //npc = npcs[j]
-      //writeCharacter(npc, locations);
-      log = log + "-->" + npcs[j] + "(" + Sim.getCharacterNameByTag(npcs[j])  + ")";
-      setTimeout (console.log.bind (console, log));
+function writeCharacter (npc, log) {
+  log = log + "-->" + npc + "{{" + Sim.getCharacterNameByTag(npc)  + "}}";
+  setTimeout (console.log.bind (console, log));
+  
+  var info = Sim.getCharacterInfoByTag(npc);
+  var infoArr = info.toString().split(',');
+  
+  // Check if character has any info
+  if (infoArr[0] == ""){
+    return;
+  } else {
+    log = npc;
+    for (let k = 0; k < infoArr.length; k++){
+      infoPiece = infoArr[k]
+      writeIdea(infoPiece, log);
     }
-  }  
+  }
+}
+
+function writeIdea (infoPiece, log) {
+  log = log + "-->" + infoPiece + "(\"" + Sim.getInfoTextByTag(infoPiece)  + "\")";
+  setTimeout (console.log.bind (console, log));
+}
 
 //renderNames();
 //renderLocations();

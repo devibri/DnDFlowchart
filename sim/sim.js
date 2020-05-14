@@ -56,6 +56,13 @@ function getCharacterNameByTag(db, tag) {
   return datascript.q(`[:find ?n :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "name" ?n]]`, db);
 }
 
+function getCharacterInfoByTag(db, tag) {
+  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "information" ?i]]`, db);
+}
+
+function getInfoTextByTag(db, tag) {
+  return datascript.q(`[:find ?t :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "text" ?t]]`, db);
+}
 
 
 // Generate the appropriate objects and put them into the database 
@@ -67,7 +74,8 @@ function generateCharacter(db, i, castObjects) {
     name: `${char.fields.name}`,
     occupation: `${char.fields.occupation}`,
     faction:  `${char.fields.faction}`,
-    status:  `${char.fields.status}`
+    status:  `${char.fields.status}`,
+    information: `${char.fields.information}`
   };
   return createEntity(db, entity);
 }
@@ -80,6 +88,17 @@ function generateLocation(db, i, locations) {
     name: `${location.fields.name}`, 
     known: `${location.fields.known}`,
     NPCs: `${location.fields.NPCs}`
+  }
+  return createEntity(db, entity);
+}
+
+function generateInfo(db, i, infoObjects) {
+  var info = Object.values(infoObjects)[i];
+  const entity = {
+    type: 'info', 
+    tag: `${info.tag}`,
+    text: `${info.fields.text}`, 
+    known: `${info.fields.known}`
   }
   return createEntity(db, entity);
 }
@@ -113,6 +132,12 @@ for (let i = 0; i < _.size(characters); i++){
 const locations = JSON.parse(json_locations);
 for (let i = 0; i < _.size(locations); i++){ 
   gameDB = generateLocation(gameDB, i, locations);
+}
+
+//Add info for each of the info pieces
+const information = JSON.parse(json_info);
+for (let i = 0; i < _.size(information); i++){ 
+  gameDB = generateInfo(gameDB, i, information);
 }
 
 /// return Sim singleton object
@@ -161,6 +186,12 @@ return {
   // Get the character's full name by their tag
   getCharacterNameByTag: function(tag) {
     return getCharacterNameByTag(gameDB, tag);
+  }, 
+  getCharacterInfoByTag: function(tag) {
+    return getCharacterInfoByTag(gameDB, tag);
+  },
+  getInfoTextByTag: function(tag) {
+    return getInfoTextByTag(gameDB, tag);
   }
 }
 

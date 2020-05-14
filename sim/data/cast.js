@@ -6,7 +6,7 @@ var json_cast = `[
       "occupation": "Innkeeper",
       "faction": "none",
       "status": "alive",
-      "info": ["RedbrandHangout"]
+      "information": ["RedbrandHangout"]
     }
   },
   {
@@ -16,7 +16,7 @@ var json_cast = `[
       "occupation": "Owns trading post",
       "faction": "none",
       "status": "alive",
-      "info": ["RedbrandHangout", "RedbrandShakedown"]
+      "information": ["RedbrandShakedown"]
     }
   },
   {
@@ -26,7 +26,7 @@ var json_cast = `[
       "occupation": "none",
       "faction": "Order of the Gauntlet",
       "status": "alive",
-      "info": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
+      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
     }
   },
   {
@@ -36,7 +36,7 @@ var json_cast = `[
       "occupation": "Runs trading post",
       "faction": "none",
       "status": "alive",
-      "info": []
+      "information": []
     }
   }, 
   {
@@ -46,7 +46,7 @@ var json_cast = `[
       "occupation": "none",
       "faction": "Zhentarim",
       "status": "alive",
-      "info": ["GoblinCragmawCastle", "KillRedbrandLeader"]
+      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"]
     }
   },  
   {
@@ -56,7 +56,7 @@ var json_cast = `[
       "occupation": "Halfling farmer",
       "faction": "none",
       "status": "alive",
-      "info": ["ReidothLocation"]
+      "information": ["ReidothLocation"]
     }
   },  
   {
@@ -66,7 +66,7 @@ var json_cast = `[
       "occupation": "Elf cleric of Tymora",
       "faction": "Harper",
       "status": "alive",
-      "info": ["AskAgathaAboutBook"]
+      "information": ["AskAgathaAboutBook"]
     }
   },  
   {
@@ -76,7 +76,7 @@ var json_cast = `[
     "occupation": "Townmaster of Phandalin",
     "faction": "none",
     "status": "alive",
-    "info": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
+    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
     }
   },  
   {
@@ -86,7 +86,7 @@ var json_cast = `[
     "occupation": "none",
     "faction": "Lords' Alliance",
     "status": "alive",
-    "info": ["MissingIarno"]
+    "information": ["MissingIarno"]
     }
   }, 
   {
@@ -96,7 +96,7 @@ var json_cast = `[
     "occupation": "Farmer",
     "faction": "none",
     "status": "alive",
-    "info": ["RedbrandHangout", "SisterGaraeleExhausted"]
+    "information": ["SisterGaraeleExhausted"]
     }
   },
   {
@@ -106,7 +106,7 @@ var json_cast = `[
     "occupation": "none",
     "faction": "Redbrands",
     "status": "alive",
-    "info": []
+    "information": []
     }
   },
   {
@@ -114,7 +114,7 @@ var json_cast = `[
    "fields": {
     "name": "Elsa",
     "status": "alive",
-    "info": ["RedbrandHangout"]
+    "information": []
     }
   },
   {
@@ -122,7 +122,7 @@ var json_cast = `[
    "fields": {
     "name": "Lanar",
     "status": "alive",
-    "info": ["OrcsTriboarTrail", "RedbrandHangout"]
+    "information": ["OrcsTriboarTrail"]
     }
   },
   {
@@ -130,7 +130,7 @@ var json_cast = `[
    "fields": {
     "name": "Trilena",
     "status": "alive",
-    "info": ["DendrarFamilyKidnapped", "RedbrandHangout"]
+    "information": ["DendrarFamilyKidnapped"]
     }
   },
   {
@@ -138,7 +138,7 @@ var json_cast = `[
    "fields": {
     "name": "Pip",
     "status": "alive",
-    "info": ["SecretTunnelKnowledge", "RedbrandHangout"]
+    "information": ["SecretTunnelKnowledge"]
     }
   },
   {
@@ -146,7 +146,7 @@ var json_cast = `[
    "fields": {
     "name": "Freda",
     "status": "alive",
-    "info": ["RedbrandsAndHalia", "RedbrandHangout"]
+    "information": ["RedbrandsAndHalia"]
     }
   },
   {
@@ -154,7 +154,7 @@ var json_cast = `[
    "fields": {
     "name": "Ander",
     "status": "alive",
-    "info": []
+    "information": []
     }
   },
   {
@@ -162,7 +162,7 @@ var json_cast = `[
    "fields": {
     "name": "Thistle",
     "status": "alive",
-    "info": []
+    "information": []
     }
   },
   {
@@ -170,7 +170,7 @@ var json_cast = `[
    "fields": {
     "name": "Grista",
     "status": "alive",
-    "info": []
+    "information": []
     }
   },
   {
@@ -178,7 +178,7 @@ var json_cast = `[
    "fields": {
     "name": "Carp",
     "status": "alive",
-    "info": ["RedbrandHideoutLocation", "SecretTunnelLocation"]
+    "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"]
     }
   }
 ]`

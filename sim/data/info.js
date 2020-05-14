@@ -59,14 +59,14 @@ var json_info = `[
   {
     "tag": "GoblinCragmawCastle",
     "fields": {
-      "text": "The goblin working for the Redbrands might know the way to Cragmaw Castle (will leverage this info to get players to accept her quest)",
+      "text": "The goblin working for the Redbrands might know the way to Cragmaw Castle, will leverage this info to get players to accept her quest",
       "known": "false"
     }
   },
   {
     "tag": "KillRedbrandLeader",
     "fields": {
-      "text": "QUEST: Kill the leader of the Redbrands (secret -- so Halia can take over)",
+      "text": "QUEST: Kill the leader of the Redbrands, secretly so Halia can take over",
       "known": "false"
     }
   },
@@ -94,7 +94,7 @@ var json_info = `[
   {
     "tag": "MissingIarno",
     "fields": {
-      "text": "Looking for missing member of order, Iarno (secretly new leader of Redbrands)",
+      "text": "Looking for missing member of order, Iarno, secretly new leader of Redbrands",
       "known": "false"
     }
   },
@@ -113,10 +113,10 @@ var json_info = `[
     }
   },
   {
-    "tag": "RedbrandShakedown",
+    "tag": "ReidothLocation",
     "fields": {
       "text": "A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree",
       "known": "false"
     }
-  },
+  }
 ]`
