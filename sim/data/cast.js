@@ -102,7 +102,7 @@ var json_cast = `[
   {
    "tag": "TheRedbrands",
    "fields": {
-    "name": "The Redbrand Gang",
+    "name": "The Redbrands",
     "occupation": "none",
     "faction": "Redbrands",
     "status": "alive",

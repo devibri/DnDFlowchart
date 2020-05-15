@@ -18,9 +18,9 @@ var json_info = `[
   {
     "tag": "SecretTunnelKnowledge",
     "fields": {
-      "text": "Carp saw a secret tunnel in the woods; the Redbrands almost caught him",
+      "text": "Carp at Alderleaf Farm saw a secret tunnel in the woods; the Redbrands almost caught him",
       "known": "false",
-      "locations": []
+      "locations": ["AlderleafFarm"]
     }
   },
   {
@@ -44,7 +44,7 @@ var json_info = `[
     "fields": {
       "text": "Redbrands don't mess with Halia at Phandalin Miner's Exchange",
       "known": "false",
-      "locations": []
+      "locations": ["PhandalinMinersExchange"]
     }
   },
   {
@@ -52,7 +52,7 @@ var json_info = `[
     "fields": {
       "text": "Redbrands hang out at Sleeping Giant Tap House and they are trouble",
       "known": "false",
-      "locations": []
+      "locations": ["SleepingGiantTapHouse"]
     }
   },
   {
@@ -60,7 +60,7 @@ var json_info = `[
     "fields": {
       "text": "Sister Garaele recently returned to the Shrine of Luck injured and exhausted",
       "known": "false",
-      "locations": []
+      "locations": ["ShrineOfLuck"]
     }
   },
   {

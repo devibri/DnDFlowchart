@@ -49,7 +49,7 @@ function getLocationStateByName(db, name) {
 }
 
 function getLocationNPCsByName(db, name) {
-  return datascript.q(`[:find ?o :where [?c "type" "loc"] [?c "name" "${name}"] [?c "NPCs" ?o]]`, db);
+  return datascript.q(`[:find ?c :where [?l "type" "loc"] [?l "name" "${name}"] [?l "NPCs" ?c]]`, db);
 }
 
 function getCharacterNameByTag(db, tag) {
@@ -62,6 +62,14 @@ function getCharacterInfoByTag(db, tag) {
 
 function getInfoTextByTag(db, tag) {
   return datascript.q(`[:find ?t :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "text" ?t]]`, db);
+}
+
+function getInfoLocationsByTag(db, tag) {
+  return datascript.q(`[:find ?l :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "locations" ?l]]`, db);
+}
+
+function getLocationNameByTag(db, tag) {
+  return datascript.q(`[:find ?n :where [?l "type" "loc"] [?l "tag" "${tag}"] [?l "name" ?n]]`, db);
 }
 
 
@@ -193,6 +201,12 @@ return {
   },
   getInfoTextByTag: function(tag) {
     return getInfoTextByTag(gameDB, tag);
+  },
+  getInfoLocationsByTag: function(tag) {
+    return getInfoLocationsByTag(gameDB, tag)
+  },
+  getLocationNameByTag: function(tag) {
+    return getLocationNameByTag(gameDB, tag)
   }
 }
 

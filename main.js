@@ -95,7 +95,7 @@ function writeCharacter (npc, log) {
   } else {
     log = npc;
     for (let k = 0; k < infoArr.length; k++){
-      infoPiece = infoArr[k]
+      var infoPiece = infoArr[k]
       writeIdea(infoPiece, log);
     }
   }
@@ -103,6 +103,25 @@ function writeCharacter (npc, log) {
 
 function writeIdea (infoPiece, log) {
   log = log + "-->" + infoPiece + "(\"" + Sim.getInfoTextByTag(infoPiece)  + "\")";
+  setTimeout (console.log.bind (console, log));
+
+  var locs = Sim.getInfoLocationsByTag(infoPiece); 
+  var locArr = locs.toString().split(',');
+
+  // Check if info has any locations
+  if (locArr[0] == ""){
+    return;
+  } else {
+    log = infoPiece;
+    for (let x = 0; x < locArr.length; x++){
+      var loc = locArr[x]
+      writeSecondaryLocation(loc, log);
+    }
+  }
+}
+
+function writeSecondaryLocation(loc, log) {
+  log = log + "-->" + loc + "[" + Sim.getLocationNameByTag(loc)  + "]";
   setTimeout (console.log.bind (console, log));
 }
 

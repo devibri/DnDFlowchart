@@ -46,17 +46,21 @@
 			    graph LR
 			    	StonehillInn[The Stonehill Inn]-->ToblinStonehill{{Toblin Stonehill}}
 					ToblinStonehill-->RedbrandHangout("Redbrands hang out at Sleeping Giant Tap House and they are trouble")
+					RedbrandHangout-->SleepingGiantTapHouse[Sleeping Giant tap house]
 					StonehillInn[The Stonehill Inn]-->Narth{{Narth}}
 					Narth-->SisterGaraeleExhausted("Sister Garaele recently returned to the Shrine of Luck injured and exhausted")
+					SisterGaraeleExhausted-->ShrineOfLuck[Shrine of Luck]
 					StonehillInn[The Stonehill Inn]-->Elsa{{Elsa}}
 					StonehillInn[The Stonehill Inn]-->Lanar{{Lanar}}
 					Lanar-->OrcsTriboarTrail("The townmaster wants someone to deal with the orcs around Triboar Trail")
 					StonehillInn[The Stonehill Inn]-->Trilena{{Trilena}}
 					Trilena-->DendrarFamilyKidnapped("Thal Dendrar stood up to Redbrands; they killed him and kidnapped his family")
 					StonehillInn[The Stonehill Inn]-->Pip{{Pip}}
-					Pip-->SecretTunnelKnowledge("Carp saw a secret tunnel in the woods; the Redbrands almost caught him")
+					Pip-->SecretTunnelKnowledge("Carp at Alderleaf Farm saw a secret tunnel in the woods; the Redbrands almost caught him")
+					SecretTunnelKnowledge-->AlderleafFarm[Alderleaf Farm]
 					StonehillInn[The Stonehill Inn]-->Freda{{Freda}}
 					Freda-->RedbrandsAndHalia("Redbrands don't mess with Halia at Phandalin Miner's Exchange")
+					RedbrandsAndHalia-->PhandalinMinersExchange[Phandalin Miner's Exchange]
 					LionshieldCoster[Lionshield Coster]-->LineneGraywind{{Linene Graywind}}
 					BarthensProvisions[Barthen's Provisions]-->ElmarBarthen{{Elmar Barthen}}
 					ElmarBarthen-->RedbrandShakedown("The Redbrands are shaking down local businesses")
@@ -64,25 +68,33 @@
 					BarthensProvisions[Barthen's Provisions]-->Thistle{{Thistle}}
 					TownmastersHall[Townmaster's Hall]-->HarbinWester{{Harbin Wester}}
 					HarbinWester-->OrcsTriboarTrail("The townmaster wants someone to deal with the orcs around Triboar Trail")
+					OrcsTriboarTrail-->TriboarTrail[Triboar Trail]
 					HarbinWester-->TownmasterAndRedbrands("Townmaster doesn't want players to mess with Redbrands, keep them in jail")
 					ShrineOfLuck[Shrine of Luck]-->SisterGaraele{{Sister Garaele}}
 					SisterGaraele-->AskAgathaAboutBook("QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location")
+					AskAgathaAboutBook-->AgathasLair[Agatha's Lair]
 					SleepingGiantTapHouse[Sleeping Giant tap house]-->Grista{{Grista}}
 					SleepingGiantTapHouse[Sleeping Giant tap house]-->TheRedbrands{{The Redbrand Gang}}
 					EdermathOrchard[Edermath Orchard]-->DarenEdermath{{Daren Edermath}}
 					DarenEdermath-->RedbrandHideoutLocation("The Redbrand hideout is at Tresendar Manor")
 					DarenEdermath-->GetRidOfRedbrands("Wants players to take out Redbrands")
 					DarenEdermath-->DiggingOldOwlWell("QUEST: There is undead and digging at Old Owl Well, used to be magical, want someone to investigate")
+					DiggingOldOwlWell-->OldOwlWell[Old Owl Well]
 					TresendarManor[Tresendar Manor]
 					OldOwlWell[Old Owl Well]
 					PhandalinMinersExchange[Phandalin Miner's Exchange]-->HaliaThornton{{Halia Thorton}}
 					HaliaThornton-->GoblinCragmawCastle("The goblin working for the Redbrands might know the way to Cragmaw Castle, will leverage this info to get players to accept her quest")
+					GoblinCragmawCastle-->TresendarManor[Tresendar Manor]
 					HaliaThornton-->KillRedbrandLeader("QUEST: Kill the leader of the Redbrands, secretly so Halia can take over")
+					KillRedbrandLeader-->TresendarManor[Tresendar Manor]
 					AlderleafFarm[Alderleaf Farm]-->QellineAlderleaf{{Qelline Alderleaf}}
 					QellineAlderleaf-->ReidothLocation("A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree")
+					ReidothLocation-->Thundertree[Thundertree]
 					AlderleafFarm[Alderleaf Farm]-->Carp{{Carp}}
 					Carp-->RedbrandHideoutLocation("The Redbrand hideout is at Tresendar Manor")
-					Carp-->SecretTunnelLocation("The Redbrand hideout has a secret tunnel entrance located here")
+					RedbrandHideoutLocation-->TresendarManor[Tresendar Manor]
+					Carp-->SecretTunnelLocation("The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor")
+					SecretTunnelLocation-->TresendarManor[Tresendar Manor]
 					Thundertree[Thundertree]
 					AgathasLair[Agatha's Lair]
 					TriboarTrail[Triboar Trail]
