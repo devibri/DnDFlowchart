@@ -134,5 +134,13 @@ var json_info = `[
       "known": "false",
       "locations": ["Thundertree"]
     }
+  },
+  {
+    "tag": "WaveEchoCaveLocation",
+    "fields": {
+      "text": "The location of Wave Echo Cave",
+      "known": "false",
+      "locations": ["WaveEchoCave"]
+    }
   }
 ]`

@@ -72,6 +72,10 @@ function getLocationNameByTag(db, tag) {
   return datascript.q(`[:find ?n :where [?l "type" "loc"] [?l "tag" "${tag}"] [?l "name" ?n]]`, db);
 }
 
+function getLocationNPCsByTag(db, tag) {
+  return datascript.q(`[:find ?c :where [?l "type" "loc"] [?l "tag" "${tag}"] [?l "NPCs" ?c]]`, db);
+}
+
 
 // Generate the appropriate objects and put them into the database 
 function generateCharacter(db, i, castObjects) {
@@ -207,6 +211,9 @@ return {
   },
   getLocationNameByTag: function(tag) {
     return getLocationNameByTag(gameDB, tag)
+  },
+  getLocationNPCsByTag: function(tag) {
+    return getLocationNPCsByTag(gameDB, tag)
   }
 }
 

@@ -180,5 +180,21 @@ var json_cast = `[
     "status": "alive",
     "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"]
     }
+  },
+  {
+   "tag": "Agatha",
+   "fields": {
+    "name": "Agatha the Banshee",
+    "status": "alive",
+    "information": ["WaveEchoCaveLocation"]
+    }
+  },
+  {
+   "tag": "Reidoth",
+   "fields": {
+    "name": "Reidoth",
+    "status": "alive",
+    "information": ["WaveEchoCaveLocation"]
+    }
   }
 ]`

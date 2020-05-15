@@ -74,7 +74,7 @@
 					SisterGaraele-->AskAgathaAboutBook("QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location")
 					AskAgathaAboutBook-->AgathasLair[Agatha's Lair]
 					SleepingGiantTapHouse[Sleeping Giant tap house]-->Grista{{Grista}}
-					SleepingGiantTapHouse[Sleeping Giant tap house]-->TheRedbrands{{The Redbrand Gang}}
+					SleepingGiantTapHouse[Sleeping Giant tap house]-->TheRedbrands{{The Redbrands}}
 					EdermathOrchard[Edermath Orchard]-->DarenEdermath{{Daren Edermath}}
 					DarenEdermath-->RedbrandHideoutLocation("The Redbrand hideout is at Tresendar Manor")
 					DarenEdermath-->GetRidOfRedbrands("Wants players to take out Redbrands")
@@ -95,8 +95,11 @@
 					RedbrandHideoutLocation-->TresendarManor[Tresendar Manor]
 					Carp-->SecretTunnelLocation("The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor")
 					SecretTunnelLocation-->TresendarManor[Tresendar Manor]
-					Thundertree[Thundertree]
-					AgathasLair[Agatha's Lair]
+					Thundertree[Thundertree]-->Reidoth{{Reidoth}}
+					Reidoth-->WaveEchoCaveLocation("The location of Wave Echo Cave")
+					AgathasLair[Agatha's Lair]-->Agatha{{Agatha the Banshee}}
+					Agatha-->WaveEchoCaveLocation("The location of Wave Echo Cave")
+					WaveEchoCaveLocation-->WaveEchoCave[Wave Echo Cave]
 					TriboarTrail[Triboar Trail]
 					CragmawCastle[Cragmaw Castle]
 					WaveEchoCave[Wave Echo Cave]

@@ -92,7 +92,7 @@ var json_locations = `[
     "fields": {
       "name": "Thundertree", 
       "known": false,
-      "NPCs": []
+      "NPCs": ["Reidoth"]
     }
   },
   {
@@ -100,7 +100,7 @@ var json_locations = `[
     "fields": {
       "name": "Agatha's Lair", 
       "known": false,
-      "NPCs": []
+      "NPCs": ["Agatha"]
     }
   },
   {
