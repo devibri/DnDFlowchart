@@ -68,14 +68,14 @@ function writeLocation(i, locations) {
   var npcs = locations[i].fields.NPCs;
   var npc;
 
-  var log = tag + "[" + name + "]";
+  var log = tag + "[" + name + "]:::locclass";
 
   if (npcs.length == 0){
      setTimeout (console.log.bind (console, log));
      return;
   } else { // Otherwise there are NPCs at location, add them as connected nodes 
     for (let j = 0; j < npcs.length; j++){
-      var log = tag + "[" + name + "]"; //need to reset log
+      var log = tag + "[" + name + "]:::locclass"; //need to reset log
       npc = npcs[j]
       writeCharacter(npc, log);
     }
@@ -83,7 +83,7 @@ function writeLocation(i, locations) {
 }
 
 function writeCharacter (npc, log) {
-  log = log + "-->" + npc + "{{" + Sim.getCharacterNameByTag(npc)  + "}}";
+  log = log + "-->" + npc + "{{" + Sim.getCharacterNameByTag(npc)  + "}}:::charclass";
   setTimeout (console.log.bind (console, log));
   
   var info = Sim.getCharacterInfoByTag(npc);
@@ -102,7 +102,7 @@ function writeCharacter (npc, log) {
 }
 
 function writeIdea (infoPiece, log) {
-  log = log + "-->" + infoPiece + "(\"" + Sim.getInfoTextByTag(infoPiece)  + "\")";
+  log = log + "-->" + infoPiece + "(\"" + Sim.getInfoTextByTag(infoPiece)  + "\"):::infoclass";
   setTimeout (console.log.bind (console, log));
 
   var locs = Sim.getInfoLocationsByTag(infoPiece); 
@@ -121,7 +121,7 @@ function writeIdea (infoPiece, log) {
 }
 
 function writeSecondaryLocation(loc, log) {
-  log = log + "-->" + loc + "[" + Sim.getLocationNameByTag(loc)  + "]";
+  log = log + "-->" + loc + "[" + Sim.getLocationNameByTag(loc)  + "]:::locclass";
   setTimeout (console.log.bind (console, log));
 }
 
