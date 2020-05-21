@@ -186,7 +186,7 @@ var json_cast = `[
    "fields": {
     "name": "Agatha the Banshee",
     "status": "alive",
-    "information": ["WaveEchoCaveLocation"]
+    "information": ["AgathaInfo"]
     }
   },
   {
@@ -194,7 +194,31 @@ var json_cast = `[
    "fields": {
     "name": "Reidoth",
     "status": "alive",
-    "information": ["WaveEchoCaveLocation"]
+    "information": ["GreenDragon"]
+    }
+  },
+  {
+   "tag": "GundrenRockseeker",
+   "fields": {
+    "name": "Gundren Rockseeker",
+    "status": "alive",
+    "information": ["WaveEchoCaveMap"]
+    }
+  },
+  {
+   "tag": "Hamun",
+   "fields": {
+    "name": "Hamun the Necromancer",
+    "status": "alive",
+    "information": ["HamunQuest"]
+    }
+  },
+  {
+   "tag": "RedbrandMinions",
+   "fields": {
+    "name": "Goblin Droop and Bugbears",
+    "status": "alive",
+    "information": ["RedbrandMinionInfo"]
     }
   }
 ]`

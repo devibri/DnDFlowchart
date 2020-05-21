@@ -60,7 +60,7 @@ var json_locations = `[
     "fields": {
       "name": "Tresendar Manor", 
       "known": false,
-      "NPCs": []
+      "NPCs": ["RedbrandMinions"]
     }
   },
   {
@@ -68,7 +68,7 @@ var json_locations = `[
     "fields": {
       "name": "Old Owl Well", 
       "known": false,
-      "NPCs": []
+      "NPCs": ["Hamun"]
     }
   },
   {
@@ -104,9 +104,9 @@ var json_locations = `[
     }
   },
   {
-    "tag": "TriboarTrail", 
+    "tag": "OrcCamp", 
     "fields": {
-      "name": "Triboar Trail", 
+      "name": "Orc Camp at Triboar Trail", 
       "known": true,
       "NPCs": []
     }

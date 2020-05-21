@@ -28,7 +28,7 @@ var json_info = `[
     "fields": {
       "text": "The townmaster wants someone to deal with the orcs around Triboar Trail",
       "known": "false",
-      "locations": ["TriboarTrail"]
+      "locations": ["OrcCamp"]
     }
   },
   {
@@ -136,11 +136,43 @@ var json_info = `[
     }
   },
   {
-    "tag": "WaveEchoCaveLocation",
+    "tag": "AgathaInfo",
     "fields": {
-      "text": "The location of Wave Echo Cave",
+      "text": "If players are nice to Agatha or give her the comb, she can give them one piece of information",
+      "known": "false",
+      "locations": ["WaveEchoCave", "CragmawCastle"]
+    }
+  },
+  {
+    "tag": "GreenDragon",
+    "fields": {
+      "text": "Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle",
+      "known": "false",
+      "locations": ["WaveEchoCave", "CragmawCastle"]
+    }
+  },
+  {
+    "tag": "WaveEchoCaveMap",
+    "fields": {
+      "text": "Has a map leading to Wave Echo Cave",
       "known": "false",
       "locations": ["WaveEchoCave"]
+    }
+  },
+  {
+    "tag": "HamunQuest",
+    "fields": {
+      "text": "Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave",
+      "known": "false",
+      "locations": ["AgathasLair", "OrcCamp", "WaveEchoCave"]
+    }
+  },
+  {
+    "tag": "RedbrandMinionInfo",
+    "fields": {
+      "text": "You find some bugbears messing with a goblin, Droop. After defeating the bugbears you can interrogate them or get Droop to tell you the location of Cragmaw Castle",
+      "known": "false",
+      "locations": ["CragmawCastle"]
     }
   }
 ]`
