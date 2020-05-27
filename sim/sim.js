@@ -76,6 +76,14 @@ function getLocationNPCsByTag(db, tag) {
   return datascript.q(`[:find ?c :where [?l "type" "loc"] [?l "tag" "${tag}"] [?l "NPCs" ?c]]`, db);
 }
 
+function getNextNodesByTag(db, tag) {
+  return datascript.q(`[:find ?n :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "goesTo" ?n]]`, db);
+}
+
+function getCharacterNameByInfoTag(db, tag) {
+  return datascript.q(`[:find ?c :where [?c "type" "char"] [?i "tag" "${tag}"] [?c "information" ?i]]`, db);
+}
+
 
 // Generate the appropriate objects and put them into the database 
 function generateCharacter(db, i, castObjects) {
@@ -111,7 +119,8 @@ function generateInfo(db, i, infoObjects) {
     tag: `${info.tag}`,
     text: `${info.fields.text}`, 
     known: `${info.fields.known}`,
-    locations: `${info.fields.locations}`
+    locations: `${info.fields.locations}`,
+    goesTo: `${info.fields.goesTo}`
   }
   return createEntity(db, entity);
 }
@@ -214,6 +223,12 @@ return {
   },
   getLocationNPCsByTag: function(tag) {
     return getLocationNPCsByTag(gameDB, tag)
+  },
+  getNextNodesByTag: function(tag) {
+    return getNextNodesByTag(gameDB, tag)
+  },
+  getCharacterNameByInfoTag: function(tag) {
+    return getCharacterNameByInfoTag(gameDB, tag)
   }
 }
 
