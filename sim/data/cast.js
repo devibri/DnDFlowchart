@@ -210,7 +210,7 @@ var json_cast = `[
    "fields": {
     "name": "Hamun the Necromancer",
     "status": "alive",
-    "information": ["HamunQuest"]
+    "information": ["HamunQuest", "FinishHamunQuest"]
     }
   },
   {

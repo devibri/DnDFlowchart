@@ -58,7 +58,7 @@ function writeCharacter (i, characters) {
 
 function writeIdea (infoTag, characterTag, characterName) {
   var infoText = Sim.getInfoTextByTag(infoTag);
-  log = infoTag + "[\"(" + characterName + ") " + infoText + "\"]";
+  log = infoTag + "[\"\<p\>(" + characterName + ") " + infoText + "\<\/p\>\"]";
   setTimeout (console.log.bind (console, log));
 
   var nextNodes = Sim.getNextNodesByTag(infoTag); 
@@ -82,8 +82,8 @@ function writeConnection(node, infoTag) {
 }
 
 function writeSecondaryInfo(infoTag) {
-  var infoText = Sim.getInfoTextByTag(infoTag);
-  log = infoTag + "[\"" + infoText + "\"]";
+  var infoText = Sim.getInfoTextByTag(infoTag); 
+  log = infoTag + "[\"\<p\>" + infoText + "\<\/p\>\"]";
   setTimeout (console.log.bind (console, log));
 
   var nextNodes = Sim.getNextNodesByTag(infoTag); 
@@ -109,3 +109,17 @@ function writeSecondaryLocation(loc, log) {
 //renderNames();
 //renderLocations();
 writeToConsole();
+
+
+
+//Set it so that each node has line breaks after certain # of words
+$("p").each(function() {
+  var html = $(this).html().split(" ");
+  var slicedHTML = "";
+  var i;
+  for (i = 0; i <= html.length - 3; i = i + 3) {
+    slicedHTML = slicedHTML + html.slice(i, i+3).join(" ") + "<br />";
+  }
+  slicedHTML = slicedHTML + html.slice(i).join(" ");
+  $(this).html(slicedHTML);
+});
