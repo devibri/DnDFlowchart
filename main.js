@@ -102,7 +102,7 @@ function writeCharacter (npc, log) {
 }
 
 function writeIdea (infoPiece, log) {
-  log = log + "-->" + infoPiece + "(\"" + Sim.getInfoTextByTag(infoPiece)  + "\"):::infoclass";
+  log = log + "-->" + infoPiece + "(\"\<p\>" + Sim.getInfoTextByTag(infoPiece)  + "\<\/p\>\"):::infoclass";
   setTimeout (console.log.bind (console, log));
 
   var locs = Sim.getInfoLocationsByTag(infoPiece); 
@@ -128,3 +128,16 @@ function writeSecondaryLocation(loc, log) {
 //renderNames();
 //renderLocations();
 writeToConsole();
+
+
+//Set it so that each node has line breaks after certain # of words
+$("p").each(function() {
+  var html = $(this).html().split(" ");
+  var slicedHTML = "";
+  var i;
+  for (i = 0; i <= html.length - 3; i = i + 3) {
+    slicedHTML = slicedHTML + html.slice(i, i+3).join(" ") + "<br />";
+  }
+  slicedHTML = slicedHTML + html.slice(i).join(" ");
+  $(this).html(slicedHTML);
+});
