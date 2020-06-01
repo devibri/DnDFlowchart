@@ -84,6 +84,10 @@ function getCharacterNameByInfoTag(db, tag) {
   return datascript.q(`[:find ?c :where [?c "type" "char"] [?i "tag" "${tag}"] [?c "information" ?i]]`, db);
 }
 
+function getStorylineByInfoTag(db, tag) {
+  return datascript.q(`[:find ?s :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "storyline" ?s]]`, db);
+}
+
 
 // Generate the appropriate objects and put them into the database 
 function generateCharacter(db, i, castObjects) {
@@ -120,7 +124,8 @@ function generateInfo(db, i, infoObjects) {
     text: `${info.fields.text}`, 
     known: `${info.fields.known}`,
     locations: `${info.fields.locations}`,
-    goesTo: `${info.fields.goesTo}`
+    goesTo: `${info.fields.goesTo}`,
+    storyline: `${info.fields.storyline}`
   }
   return createEntity(db, entity);
 }
@@ -229,6 +234,9 @@ return {
   },
   getCharacterNameByInfoTag: function(tag) {
     return getCharacterNameByInfoTag(gameDB, tag)
+  },
+  getStorylineByInfoTag: function(tag) {
+    return getStorylineByInfoTag(gameDB, tag)
   }
 }
 

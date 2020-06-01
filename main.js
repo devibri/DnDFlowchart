@@ -13,31 +13,6 @@ function writeToConsole() {
   }
 }
 
-
-// Iterates through json of locations, then goes through and creates nodes based on chars connected to location
-function writeLocation(i, locations) {
-  // Get location info
-  var tag = locations[i].tag;
-  var name = locations[i].fields.name;
-  var npcs = locations[i].fields.NPCs;
-  var npc;
-
-  var log = tag + "[" + name + "]:::locclass";
-
-  var locationName = name;
-
-  if (npcs.length == 0){
-     //setTimeout (console.log.bind (console, log));
-     return;
-  } else { // Otherwise there are NPCs at location, add them as connected nodes 
-    for (let j = 0; j < npcs.length; j++){
-      var log = tag + "[" + name + "]:::locclass"; //need to reset log
-      npc = npcs[j]
-      writeCharacter(npc, log, locationName);
-    }
-  } 
-}
-
 function writeCharacter (i, characters) {
   var characterTag = characters[i].tag;
   var characterName = characters[i].fields.name;
@@ -58,7 +33,7 @@ function writeCharacter (i, characters) {
 
 function writeIdea (infoTag, characterTag, characterName) {
   var infoText = Sim.getInfoTextByTag(infoTag);
-  log = infoTag + "[\"\<p\>(" + characterName + ") " + infoText + "\<\/p\>\"]";
+  log = infoTag + "[\"\<p\>(" + characterName + ") " + infoText + "\<\/p\>\"]:::" + Sim.getStorylineByInfoTag(infoTag);
   setTimeout (console.log.bind (console, log));
 
   var nextNodes = Sim.getNextNodesByTag(infoTag); 
@@ -83,7 +58,7 @@ function writeConnection(node, infoTag) {
 
 function writeSecondaryInfo(infoTag) {
   var infoText = Sim.getInfoTextByTag(infoTag); 
-  log = infoTag + "[\"\<p\>" + infoText + "\<\/p\>\"]";
+  log = infoTag + "[\"\<p\>" + infoText + "\<\/p\>\"]:::" + Sim.getStorylineByInfoTag(infoTag);
   setTimeout (console.log.bind (console, log));
 
   var nextNodes = Sim.getNextNodesByTag(infoTag); 
@@ -101,15 +76,7 @@ function writeSecondaryInfo(infoTag) {
   }
 }
 
-function writeSecondaryLocation(loc, log) {
-  log = log + "-->" + loc + "[" + Sim.getLocationNameByTag(loc)  + "]:::locclass";
-  //setTimeout (console.log.bind (console, log));
-}
-
-//renderNames();
-//renderLocations();
 writeToConsole();
-
 
 
 //Set it so that each node has line breaks after certain # of words
