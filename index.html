@@ -53,117 +53,117 @@
 			<div class="mermaid">
 			    graph LR
 			    	RedbrandHangout["<p>(Toblin Stonehill) Redbrands hang out at Sleeping Giant Tap House and they are trouble</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-RedbrandHangout-->LearnAboutRedbrands
-RedbrandShakedown["<p>(Elmar Barthen) The Redbrands are shaking down local businesses</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-RedbrandShakedown-->LearnAboutRedbrands
-RedbrandHideoutLocation["<p>(Daren Edermath) The Redbrand hideout is at Tresendar Manor</p>"]
-FindRedbrands["<p>Find location of and enter Redbrand hideout</p>"]
-FindRedbrands-->RedbrandMinionInfo
-RedbrandHideoutLocation-->FindRedbrands
-GetRidOfRedbrands["<p>(Daren Edermath) Wants players to take out Redbrands</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-GetRidOfRedbrands-->LearnAboutRedbrands
-DiggingOldOwlWell["<p>(Daren Edermath) QUEST: There is undead and digging at Old Owl Well, used to be magical, want someone to investigate</p>"]
-HamunQuest["<p>Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave</p>"]
-HamunQuest-->RemoveOrcCamp
-HamunQuest-->LearnTowerMaker
-DiggingOldOwlWell-->HamunQuest
-GoblinCragmawCastle["<p>(Halia Thorton) The goblin working for the Redbrands might know the way to Cragmaw Castle, Halia will leverage this info to get players to accept her quest</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-GoblinCragmawCastle-->LearnAboutRedbrands
-KillRedbrandLeader["<p>(Halia Thorton) Wants players to kill the leader of the Redbrands (she has secret plans to take over)</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-KillRedbrandLeader-->LearnAboutRedbrands
-ReidothLocation["<p>(Qelline Alderleaf) A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree</p>"]
-GreenDragon["<p>Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle</p>"]
-GreenDragon-->FindWaveEchoCave
-GreenDragon-->FindCragmawCastle
-ReidothLocation-->GreenDragon
-AskAgathaAboutBook["<p>(Sister Garaele) QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location</p>"]
-AgathaInfo["<p>If players are nice to Agatha or give her the comb, she can give them one piece of information</p>"]
-AgathaInfo-->FindCragmawCastle
-AgathaInfo-->FindWaveEchoCave
-AgathaInfo-->LearnTowerMaker
-AskAgathaAboutBook-->AgathaInfo
-OrcsTriboarTrail["<p>(Harbin Wester) The townmaster wants someone to deal with the orcs around Triboar Trail</p>"]
-RemoveOrcCamp["<p>Players can remove orc camp from Wyvern Tor</p>"]
-RemoveOrcCamp-->FinishHamunQuest
-OrcsTriboarTrail-->RemoveOrcCamp
-TownmasterAndRedbrands["<p>(Harbin Wester) Townmaster doesn't want players to mess with Redbrands, keep them in jail</p>"]
-MissingIarno["<p>(Sildar Hallwinter) Looking for missing member of order, Iarno (he is secretly new leader of Redbrands)</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-MissingIarno-->LearnAboutRedbrands
-SisterGaraeleExhausted["<p>(Narth) Sister Garaele recently returned to the Shrine of Luck injured and exhausted</p>"]
-AskAgathaAboutBook["<p>QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location</p>"]
-AskAgathaAboutBook-->AgathaInfo
-SisterGaraeleExhausted-->AskAgathaAboutBook
-OrcsTriboarTrail["<p>(Lanar) The townmaster wants someone to deal with the orcs around Triboar Trail</p>"]
-RemoveOrcCamp["<p>Players can remove orc camp from Wyvern Tor</p>"]
-RemoveOrcCamp-->FinishHamunQuest
-OrcsTriboarTrail-->RemoveOrcCamp
-DendrarFamilyKidnapped["<p>(Trilena) Thal Dendrar stood up to Redbrands; they killed him and kidnapped his family</p>"]
-LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
-LearnAboutRedbrands-->FindRedbrands
-DendrarFamilyKidnapped-->LearnAboutRedbrands
-SecretTunnelKnowledge["<p>(Pip) Carp at Alderleaf Farm saw a secret tunnel in the woods; the Redbrands almost caught him</p>"]
-SecretTunnelLocation["<p>The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor</p>"]
-SecretTunnelLocation-->FindRedbrands
-SecretTunnelKnowledge-->SecretTunnelLocation
-RedbrandsAndHalia["<p>(Freda) Redbrands don't mess with Halia at Phandalin Miner's Exchange</p>"]
-KillRedbrandLeader["<p>Wants players to kill the leader of the Redbrands (she has secret plans to take over)</p>"]
-KillRedbrandLeader-->LearnAboutRedbrands
-RedbrandsAndHalia-->KillRedbrandLeader
-GoblinCragmawCastle["<p>The goblin working for the Redbrands might know the way to Cragmaw Castle, Halia will leverage this info to get players to accept her quest</p>"]
-GoblinCragmawCastle-->LearnAboutRedbrands
-RedbrandsAndHalia-->GoblinCragmawCastle
-RedbrandHideoutLocation["<p>(Carp) The Redbrand hideout is at Tresendar Manor</p>"]
-FindRedbrands["<p>Find location of and enter Redbrand hideout</p>"]
-FindRedbrands-->RedbrandMinionInfo
-RedbrandHideoutLocation-->FindRedbrands
-SecretTunnelLocation["<p>(Carp) The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor</p>"]
-FindRedbrands["<p>Find location of and enter Redbrand hideout</p>"]
-FindRedbrands-->RedbrandMinionInfo
-SecretTunnelLocation-->FindRedbrands
-AgathaInfo["<p>(Agatha the Banshee) If players are nice to Agatha or give her the comb, she can give them one piece of information</p>"]
-FindCragmawCastle["<p>Find location of Cragmaw Castle</p>"]
-FindCragmawCastle-->WaveEchoCaveMap
-AgathaInfo-->FindCragmawCastle
-FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
-AgathaInfo-->FindWaveEchoCave
-LearnTowerMaker["<p>Ask Agatha about maker of old magic tower ruin</p>"]
-LearnTowerMaker-->FinishHamunQuest
-AgathaInfo-->LearnTowerMaker
-GreenDragon["<p>(Reidoth) Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle</p>"]
-FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
-GreenDragon-->FindWaveEchoCave
-FindCragmawCastle["<p>Find location of Cragmaw Castle</p>"]
-FindCragmawCastle-->WaveEchoCaveMap
-GreenDragon-->FindCragmawCastle
-WaveEchoCaveMap["<p>(Gundren Rockseeker) Has a map leading to Wave Echo Cave</p>"]
-FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
-WaveEchoCaveMap-->FindWaveEchoCave
-HamunQuest["<p>(Hamun the Necromancer) Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave</p>"]
-RemoveOrcCamp["<p>Players can remove orc camp from Wyvern Tor</p>"]
-RemoveOrcCamp-->FinishHamunQuest
-HamunQuest-->RemoveOrcCamp
-LearnTowerMaker["<p>Ask Agatha about maker of old magic tower ruin</p>"]
-LearnTowerMaker-->FinishHamunQuest
-HamunQuest-->LearnTowerMaker
-FinishHamunQuest["<p>(Hamun the Necromancer) Talk to Hamun about completing one of his tasks</p>"]
-FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
-FinishHamunQuest-->FindWaveEchoCave
-RedbrandMinionInfo["<p>(Goblin Droop and Bugbears) You find some bugbears messing with a goblin, Droop. After defeating the bugbears you can interrogate them or get Droop to tell you the location of Cragmaw Castle</p>"]
-FindCragmawCastle["<p>Find location of Cragmaw Castle</p>"]
-FindCragmawCastle-->WaveEchoCaveMap
-RedbrandMinionInfo-->FindCragmawCastle
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					RedbrandHangout-->LearnAboutRedbrands
+					RedbrandShakedown["<p>(Elmar Barthen) The Redbrands are shaking down local businesses</p>"]
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					RedbrandShakedown-->LearnAboutRedbrands
+					RedbrandHideoutLocation["<p>(Daren Edermath) The Redbrand hideout is at Tresendar Manor</p>"]
+					FindRedbrands["<p>Find location of and enter Redbrand hideout</p>"]
+					FindRedbrands-->RedbrandMinionInfo
+					RedbrandHideoutLocation-->FindRedbrands
+					GetRidOfRedbrands["<p>(Daren Edermath) Wants players to take out Redbrands</p>"]
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					GetRidOfRedbrands-->LearnAboutRedbrands
+					DiggingOldOwlWell["<p>(Daren Edermath) QUEST: There is undead and digging at Old Owl Well, used to be magical, want someone to investigate</p>"]
+					HamunQuest["<p>Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave</p>"]
+					HamunQuest-->RemoveOrcCamp
+					HamunQuest-->LearnTowerMaker
+					DiggingOldOwlWell-->HamunQuest
+					GoblinCragmawCastle["<p>(Halia Thorton) The goblin working for the Redbrands might know the way to Cragmaw Castle, Halia will leverage this info to get players to accept her quest</p>"]
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					GoblinCragmawCastle-->LearnAboutRedbrands
+					KillRedbrandLeader["<p>(Halia Thorton) Wants players to kill the leader of the Redbrands (she has secret plans to take over)</p>"]
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					KillRedbrandLeader-->LearnAboutRedbrands
+					ReidothLocation["<p>(Qelline Alderleaf) A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree</p>"]
+					GreenDragon["<p>Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle</p>"]
+					GreenDragon-->FindWaveEchoCave
+					GreenDragon-->FindCragmawCastle
+					ReidothLocation-->GreenDragon
+					AskAgathaAboutBook["<p>(Sister Garaele) QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location</p>"]
+					AgathaInfo["<p>If players are nice to Agatha or give her the comb, she can give them one piece of information</p>"]
+					AgathaInfo-->FindCragmawCastle
+					AgathaInfo-->FindWaveEchoCave
+					AgathaInfo-->LearnTowerMaker
+					AskAgathaAboutBook-->AgathaInfo
+					OrcsTriboarTrail["<p>(Harbin Wester) The townmaster wants someone to deal with the orcs around Triboar Trail</p>"]
+					RemoveOrcCamp["<p>Players can remove orc camp from Wyvern Tor</p>"]
+					RemoveOrcCamp-->FinishHamunQuest
+					OrcsTriboarTrail-->RemoveOrcCamp
+					TownmasterAndRedbrands["<p>(Harbin Wester) Townmaster doesn't want players to mess with Redbrands, keep them in jail</p>"]
+					MissingIarno["<p>(Sildar Hallwinter) Looking for missing member of order, Iarno (he is secretly new leader of Redbrands)</p>"]
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					MissingIarno-->LearnAboutRedbrands
+					SisterGaraeleExhausted["<p>(Narth) Sister Garaele recently returned to the Shrine of Luck injured and exhausted</p>"]
+					AskAgathaAboutBook["<p>QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location</p>"]
+					AskAgathaAboutBook-->AgathaInfo
+					SisterGaraeleExhausted-->AskAgathaAboutBook
+					OrcsTriboarTrail["<p>(Lanar) The townmaster wants someone to deal with the orcs around Triboar Trail</p>"]
+					RemoveOrcCamp["<p>Players can remove orc camp from Wyvern Tor</p>"]
+					RemoveOrcCamp-->FinishHamunQuest
+					OrcsTriboarTrail-->RemoveOrcCamp
+					DendrarFamilyKidnapped["<p>(Trilena) Thal Dendrar stood up to Redbrands; they killed him and kidnapped his family</p>"]
+					LearnAboutRedbrands["<p>Motivate players  to take down Redbrands</p>"]
+					LearnAboutRedbrands-->FindRedbrands
+					DendrarFamilyKidnapped-->LearnAboutRedbrands
+					SecretTunnelKnowledge["<p>(Pip) Carp at Alderleaf Farm saw a secret tunnel in the woods; the Redbrands almost caught him</p>"]
+					SecretTunnelLocation["<p>The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor</p>"]
+					SecretTunnelLocation-->FindRedbrands
+					SecretTunnelKnowledge-->SecretTunnelLocation
+					RedbrandsAndHalia["<p>(Freda) Redbrands don't mess with Halia at Phandalin Miner's Exchange</p>"]
+					KillRedbrandLeader["<p>Wants players to kill the leader of the Redbrands (she has secret plans to take over)</p>"]
+					KillRedbrandLeader-->LearnAboutRedbrands
+					RedbrandsAndHalia-->KillRedbrandLeader
+					GoblinCragmawCastle["<p>The goblin working for the Redbrands might know the way to Cragmaw Castle, Halia will leverage this info to get players to accept her quest</p>"]
+					GoblinCragmawCastle-->LearnAboutRedbrands
+					RedbrandsAndHalia-->GoblinCragmawCastle
+					RedbrandHideoutLocation["<p>(Carp) The Redbrand hideout is at Tresendar Manor</p>"]
+					FindRedbrands["<p>Find location of and enter Redbrand hideout</p>"]
+					FindRedbrands-->RedbrandMinionInfo
+					RedbrandHideoutLocation-->FindRedbrands
+					SecretTunnelLocation["<p>(Carp) The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor</p>"]
+					FindRedbrands["<p>Find location of and enter Redbrand hideout</p>"]
+					FindRedbrands-->RedbrandMinionInfo
+					SecretTunnelLocation-->FindRedbrands
+					AgathaInfo["<p>(Agatha the Banshee) If players are nice to Agatha or give her the comb, she can give them one piece of information</p>"]
+					FindCragmawCastle["<p>Find location of Cragmaw Castle</p>"]
+					FindCragmawCastle-->WaveEchoCaveMap
+					AgathaInfo-->FindCragmawCastle
+					FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
+					AgathaInfo-->FindWaveEchoCave
+					LearnTowerMaker["<p>Ask Agatha about maker of old magic tower ruin</p>"]
+					LearnTowerMaker-->FinishHamunQuest
+					AgathaInfo-->LearnTowerMaker
+					GreenDragon["<p>(Reidoth) Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle</p>"]
+					FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
+					GreenDragon-->FindWaveEchoCave
+					FindCragmawCastle["<p>Find location of Cragmaw Castle</p>"]
+					FindCragmawCastle-->WaveEchoCaveMap
+					GreenDragon-->FindCragmawCastle
+					WaveEchoCaveMap["<p>(Gundren Rockseeker) Has a map leading to Wave Echo Cave</p>"]
+					FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
+					WaveEchoCaveMap-->FindWaveEchoCave
+					HamunQuest["<p>(Hamun the Necromancer) Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave</p>"]
+					RemoveOrcCamp["<p>Players can remove orc camp from Wyvern Tor</p>"]
+					RemoveOrcCamp-->FinishHamunQuest
+					HamunQuest-->RemoveOrcCamp
+					LearnTowerMaker["<p>Ask Agatha about maker of old magic tower ruin</p>"]
+					LearnTowerMaker-->FinishHamunQuest
+					HamunQuest-->LearnTowerMaker
+					FinishHamunQuest["<p>(Hamun the Necromancer) Talk to Hamun about completing one of his tasks</p>"]
+					FindWaveEchoCave["<p>Explore Wave Echo Cave</p>"]
+					FinishHamunQuest-->FindWaveEchoCave
+					RedbrandMinionInfo["<p>(Goblin Droop and Bugbears) You find some bugbears messing with a goblin, Droop. After defeating the bugbears you can interrogate them or get Droop to tell you the location of Cragmaw Castle</p>"]
+					FindCragmawCastle["<p>Find location of Cragmaw Castle</p>"]
+					FindCragmawCastle-->WaveEchoCaveMap
+					RedbrandMinionInfo-->FindCragmawCastle
 			</div>
 	</main>
 </body>
