@@ -4,89 +4,80 @@ function createNode(html) {
   return div.firstChild;
 }
 
-function writeToConsole() {
-  //Add locations for each of the locations
-  const characters = JSON.parse(json_cast);
-
-  for (let i = 0; i < characters.length; i++){ 
-   writeCharacter(i, characters);
+function renderNames() {
+  characterList.innerHTML = '';
+  // query sim for list of characters
+  const npcs = Sim.getAllCharacterNames(); 
+  for (let i = 0; i < npcs.length; i++) {
+    const npc = npcs[i];
+    let html = `<div class="character-list">
+      <div class="npc"><h4>${npc}</h4></div>
+        <ul>` + getOccupation(npc) + getFaction(npc) + getStatus(npc) + getFamilyOf(npc) + getFriendOf(npc) 
+        + `</ul><br>
+      </div>`
+      const node = createNode(html);
+      characterList.appendChild(node);
   }
 }
 
-function writeCharacter (i, characters) {
-  var characterTag = characters[i].tag;
-  var characterName = characters[i].fields.name;
-  
-  var info = Sim.getCharacterInfoByTag(characterTag);
-  var infoArr = info.toString().split(',');
-  
-  // Check if character has any info
-  if (infoArr[0] == ""){
-    return;
-  } else {
-    for (let k = 0; k < infoArr.length; k++){
-      var infoPiece = infoArr[k]
-      writeIdea(infoPiece, characterTag, characterName);
-    }
+function getOccupation(npc) {
+  let occupation = Sim.getCharacterOccupationByName(npc); 
+  if (occupation[0] == "undefined") {
+    return ``
+  }
+  else {
+    return `<li>
+              Occupation:  ${Sim.getCharacterOccupationByName(npc)}
+            </li>`
   }
 }
 
-function writeIdea (infoTag, characterTag, characterName) {
-  var infoText = Sim.getInfoTextByTag(infoTag);
-  log = infoTag + "[\"\<p\>(" + characterName + ") " + infoText + "\<\/p\>\"]:::" + Sim.getStorylineByInfoTag(infoTag);
-  setTimeout (console.log.bind (console, log));
-
-  var nextNodes = Sim.getNextNodesByTag(infoTag); 
-  var nextNodeArray = nextNodes.toString().split(',');
-
-  // Check if info has anything it connects with
-  if (nextNodeArray[0] == ""){
-    return;
-  } else {
-    for (let x = 0; x < nextNodeArray.length; x++){
-      var node = nextNodeArray[x]
-      writeSecondaryInfo(node);
-      writeConnection(node, infoTag);
-    }
+function getFaction(npc) {
+  let faction = Sim.getCharacterFactionByName(npc); 
+  if (faction[0] == "undefined") {
+    return ``
+  }
+  else {
+    return `<li>
+              Faction:  ${Sim.getCharacterFactionByName(npc)}
+            </li>`
   }
 }
 
-function writeConnection(node, infoTag) {
-  log = infoTag + "-->" + node;
-  setTimeout (console.log.bind (console, log));
-}
-
-function writeSecondaryInfo(infoTag) {
-  var infoText = Sim.getInfoTextByTag(infoTag); 
-  log = infoTag + "[\"\<p\>" + infoText + "\<\/p\>\"]:::" + Sim.getStorylineByInfoTag(infoTag);
-  setTimeout (console.log.bind (console, log));
-
-  var nextNodes = Sim.getNextNodesByTag(infoTag); 
-  var nextNodeArray = nextNodes.toString().split(',');
-
-  // Check if info has any locations
-  if (nextNodeArray[0] == ""){
-    return;
-  } else {
-    for (let x = 0; x < nextNodeArray.length; x++){
-      var node = nextNodeArray[x];
-      writeConnection(node, infoTag);
-      //writeSecondaryInfo(node);
-    }
+function getStatus(npc) {
+  let faction = Sim.getCharacterStatusByName(npc); 
+  if (faction[0] == "undefined") {
+    return ``
+  }
+  else {
+    return `<li>
+              Status:  ${Sim.getCharacterStatusByName(npc)}
+            </li>`
   }
 }
 
-writeToConsole();
-
-
-//Set it so that each node has line breaks after certain # of words
-$("p").each(function() {
-  var html = $(this).html().split(" ");
-  var slicedHTML = "";
-  var i;
-  for (i = 0; i <= html.length - 3; i = i + 3) {
-    slicedHTML = slicedHTML + html.slice(i, i+3).join(" ") + "<br />";
+function getFamilyOf(npc) {
+  let family = Sim.getCharacterFamilyByName(npc); 
+  if (family[0] == "undefined") {
+    return ``
   }
-  slicedHTML = slicedHTML + html.slice(i).join(" ");
-  $(this).html(slicedHTML);
-});
+  else {
+    return `<li>
+              Family:  ${Sim.getCharacterFamilyByName(npc)}
+            </li>`
+  }
+}
+
+function getFriendOf(npc) {
+  let friends = Sim.getCharacterFriendsByName(npc); 
+  if (friends[0] == "undefined") {
+    return ``
+  }
+  else {
+    return `<li>
+              Friends:  ${Sim.getCharacterFriendsByName(npc)}
+            </li>`
+  }
+}
+
+renderNames();

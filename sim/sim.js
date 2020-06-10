@@ -56,8 +56,16 @@ function getCharacterNameByTag(db, tag) {
   return datascript.q(`[:find ?n :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "name" ?n]]`, db);
 }
 
-function getCharacterInfoByTag(db, tag) {
-  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "information" ?i]]`, db);
+function getCharacterInfoByTag(db, name) {
+  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "name" "${name}"] [?c "information" ?i]]`, db);
+}
+
+function getCharacterFamilyByName(db, name) {
+  return datascript.q(`[:find ?f :where [?c "type" "char"] [?c "name" "${name}"] [?c "familyOf" ?f]]`, db);
+}
+
+function getCharacterFriendsByName(db, name) {
+  return datascript.q(`[:find ?f :where [?c "type" "char"] [?c "name" "${name}"] [?c "friendOf" ?f]]`, db);
 }
 
 function getInfoTextByTag(db, tag) {
@@ -99,7 +107,9 @@ function generateCharacter(db, i, castObjects) {
     occupation: `${char.fields.occupation}`,
     faction:  `${char.fields.faction}`,
     status:  `${char.fields.status}`,
-    information: `${char.fields.information}`
+    information: `${char.fields.information}`,
+    familyOf: `${char.fields.familyOf}`,
+    friendOf: `${char.fields.friendOf}`
   };
   return createEntity(db, entity);
 }
@@ -237,6 +247,12 @@ return {
   },
   getStorylineByInfoTag: function(tag) {
     return getStorylineByInfoTag(gameDB, tag)
+  },
+  getCharacterFamilyByName: function(name) {
+    return getCharacterFamilyByName(gameDB, name)
+  },
+  getCharacterFriendsByName: function(name) {
+    return getCharacterFriendsByName(gameDB, name)
   }
 }
 
