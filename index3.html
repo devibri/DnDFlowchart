@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Devi's GM Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+  	<script src="sim/datascript-0.18.4.min.js" defer></script>
+  	<script src="sim/data/cast.js" defer></script>
+  	<script src="sim/data/info.js" defer></script>
+  	<script src="sim/data/locations.js" defer></script>
+	<script src="sim/util.js" defer></script>
+	<script src="sim/sim.js" defer></script>
+	<script src="core.min.js"></script>
+	<script src="main3.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	  var config = {
+	    theme:'neutral',
+	    flowchart:{
+	      htmlLabels:true,
+	      curve:'basis',
+	    },
+	    startOnLoad: true,
+  		securityLevel: 'loose'
+	  };
+	  mermaid.initialize(config);
+	</script>
+</head>
+<body>
+
+	<!-- colors: https://www.colourlovers.com/palette/2471430/Pastel_Marshmallows -->
+	<main> 
+		<div class="column">
+			<div class="character-wrapper">
+				<div><strong>List of characters:</strong></div><br>
+				<div id="characterList">text</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

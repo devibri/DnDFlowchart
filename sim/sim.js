@@ -56,8 +56,16 @@ function getCharacterNameByTag(db, tag) {
   return datascript.q(`[:find ?n :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "name" ?n]]`, db);
 }
 
-function getCharacterInfoByTag(db, tag) {
-  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "information" ?i]]`, db);
+function getCharacterInfoByTag(db, name) {
+  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "name" "${name}"] [?c "information" ?i]]`, db);
+}
+
+function getCharacterFamilyByName(db, name) {
+  return datascript.q(`[:find ?f :where [?c "type" "char"] [?c "name" "${name}"] [?c "familyOf" ?f]]`, db);
+}
+
+function getCharacterFriendsByName(db, name) {
+  return datascript.q(`[:find ?f :where [?c "type" "char"] [?c "name" "${name}"] [?c "friendOf" ?f]]`, db);
 }
 
 function getInfoTextByTag(db, tag) {
@@ -76,6 +84,18 @@ function getLocationNPCsByTag(db, tag) {
   return datascript.q(`[:find ?c :where [?l "type" "loc"] [?l "tag" "${tag}"] [?l "NPCs" ?c]]`, db);
 }
 
+function getNextNodesByTag(db, tag) {
+  return datascript.q(`[:find ?n :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "goesTo" ?n]]`, db);
+}
+
+function getCharacterNameByInfoTag(db, tag) {
+  return datascript.q(`[:find ?c :where [?c "type" "char"] [?i "tag" "${tag}"] [?c "information" ?i]]`, db);
+}
+
+function getStorylineByInfoTag(db, tag) {
+  return datascript.q(`[:find ?s :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "storyline" ?s]]`, db);
+}
+
 
 // Generate the appropriate objects and put them into the database 
 function generateCharacter(db, i, castObjects) {
@@ -87,7 +107,9 @@ function generateCharacter(db, i, castObjects) {
     occupation: `${char.fields.occupation}`,
     faction:  `${char.fields.faction}`,
     status:  `${char.fields.status}`,
-    information: `${char.fields.information}`
+    information: `${char.fields.information}`,
+    familyOf: `${char.fields.familyOf}`,
+    friendOf: `${char.fields.friendOf}`
   };
   return createEntity(db, entity);
 }
@@ -111,7 +133,9 @@ function generateInfo(db, i, infoObjects) {
     tag: `${info.tag}`,
     text: `${info.fields.text}`, 
     known: `${info.fields.known}`,
-    locations: `${info.fields.locations}`
+    locations: `${info.fields.locations}`,
+    goesTo: `${info.fields.goesTo}`,
+    storyline: `${info.fields.storyline}`
   }
   return createEntity(db, entity);
 }
@@ -214,6 +238,21 @@ return {
   },
   getLocationNPCsByTag: function(tag) {
     return getLocationNPCsByTag(gameDB, tag)
+  },
+  getNextNodesByTag: function(tag) {
+    return getNextNodesByTag(gameDB, tag)
+  },
+  getCharacterNameByInfoTag: function(tag) {
+    return getCharacterNameByInfoTag(gameDB, tag)
+  },
+  getStorylineByInfoTag: function(tag) {
+    return getStorylineByInfoTag(gameDB, tag)
+  },
+  getCharacterFamilyByName: function(name) {
+    return getCharacterFamilyByName(gameDB, name)
+  },
+  getCharacterFriendsByName: function(name) {
+    return getCharacterFriendsByName(gameDB, name)
   }
 }
 

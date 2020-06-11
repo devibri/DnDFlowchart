@@ -4,7 +4,6 @@ var json_cast = `[
     "fields": {
       "name": "Toblin Stonehill",
       "occupation": "Innkeeper",
-      "faction": "none",
       "status": "alive",
       "information": ["RedbrandHangout"]
     }
@@ -14,7 +13,6 @@ var json_cast = `[
     "fields": {
       "name": "Elmar Barthen",
       "occupation": "Owns trading post",
-      "faction": "none",
       "status": "alive",
       "information": ["RedbrandShakedown"]
     }
@@ -23,7 +21,7 @@ var json_cast = `[
     "tag": "DarenEdermath",
     "fields": {
       "name": "Daren Edermath",
-      "occupation": "none",
+      "occupation": "Retired adventurer",
       "faction": "Order of the Gauntlet",
       "status": "alive",
       "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
@@ -34,7 +32,6 @@ var json_cast = `[
     "fields": {
       "name": "Linene Graywind",
       "occupation": "Runs trading post",
-      "faction": "none",
       "status": "alive",
       "information": []
     }
@@ -43,7 +40,7 @@ var json_cast = `[
     "tag": "HaliaThornton",
     "fields": {
       "name": "Halia Thorton",
-      "occupation": "none",
+      "occupation": "Runs Phandalin Miner's Exchange",
       "faction": "Zhentarim",
       "status": "alive",
       "information": ["GoblinCragmawCastle", "KillRedbrandLeader"]
@@ -54,9 +51,10 @@ var json_cast = `[
     "fields": {
       "name": "Qelline Alderleaf",
       "occupation": "Halfling farmer",
-      "faction": "none",
       "status": "alive",
-      "information": ["ReidothLocation"]
+      "information": ["ReidothLocation"], 
+      "familyOf": "Mother of Carp",
+      "friendOf": "Reidoth"
     }
   },  
   {
@@ -74,7 +72,6 @@ var json_cast = `[
    "fields": {
     "name": "Harbin Wester",
     "occupation": "Townmaster of Phandalin",
-    "faction": "none",
     "status": "alive",
     "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
     }
@@ -83,7 +80,6 @@ var json_cast = `[
    "tag": "SildarHallwinter",
    "fields": {
     "name": "Sildar Hallwinter",
-    "occupation": "none",
     "faction": "Lords' Alliance",
     "status": "alive",
     "information": ["MissingIarno"]
@@ -94,7 +90,6 @@ var json_cast = `[
    "fields": {
     "name": "Narth",
     "occupation": "Farmer",
-    "faction": "none",
     "status": "alive",
     "information": ["SisterGaraeleExhausted"]
     }
@@ -103,7 +98,6 @@ var json_cast = `[
    "tag": "TheRedbrands",
    "fields": {
     "name": "The Redbrands",
-    "occupation": "none",
     "faction": "Redbrands",
     "status": "alive",
     "information": []
@@ -138,7 +132,8 @@ var json_cast = `[
    "fields": {
     "name": "Pip",
     "status": "alive",
-    "information": ["SecretTunnelKnowledge"]
+    "information": ["SecretTunnelKnowledge"], 
+    "friendOf": "Carp"
     }
   },
   {
@@ -178,7 +173,8 @@ var json_cast = `[
    "fields": {
     "name": "Carp",
     "status": "alive",
-    "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"]
+    "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"],
+    "familyOf": "Child of Qelline Alderleaf"
     }
   },
   {
@@ -210,7 +206,7 @@ var json_cast = `[
    "fields": {
     "name": "Hamun the Necromancer",
     "status": "alive",
-    "information": ["HamunQuest"]
+    "information": ["HamunQuest", "FinishHamunQuest"]
     }
   },
   {
