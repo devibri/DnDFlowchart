@@ -4,8 +4,7 @@
   padding: 0;
 }
 body {
-  font-family: Georgia;
-  background-color: #FDFBFC;
+  font-family: 'Open Sans', sans-serif;
 }
 main {
   display: flex;
@@ -17,159 +16,15 @@ h3 {
 button {
   padding: .25rem;
 }
-.transcript-wrapper {
-  background: #FDFBFC;
+header {
+  background: #ebebeb;
   padding: 2rem;
-  width: 90%;
-}
-.transcript .entry {
-  border-left: 4px solid #ccc;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-}
-.transcript .entry .defaultdesc {
-  /*font-weight: bold;*/
-}
-.transcript .entry .userdesc:empty:not(:focus):before {
-  color: grey;
-  content: attr(data-default-text);
-  font-style: italic;
-}
-.sidebar {
-  background: #EEF2F5;
-  padding: 2rem;
-  width: 100%;
-}
+  display: block;
 
-.background-wrapper {
-  background: #EEF2F5;
-  padding: 2rem;
-  width: 40%;
 }
-
-.location-wrapper {
-  padding: 2rem;
-  width: 100%;
+ul {
+  list-style-position: inside;
 }
-
 .character-wrapper {
   padding: 2rem;
-  width: 100%;
-}
-
-.character-wrapper li {
-  margin-left: 40px; 
-  padding-left: 0;
-}
-
-.location-wrapper li {
-  margin-left: 40px; 
-  padding-left: 0;
-}
-
-.column {
-  float: left;
-  width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.suggestions-wrapper {
-  position: relative;
-}
-.filter-suggestions {
-  margin-bottom: 1rem;
-}
-.suggested-action {
-  margin-bottom: 1rem;
-}
-.suggested-action .tagline {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-}
-.suggested-action .contributing-author-goals {
-  font-size: 0.75rem;
-  margin-left: 1rem;
-}
-/*#openAuthorGoalEditorButton {
-  margin-bottom: 1rem;
-}*/
-#authorGoalEditorUI {
-  display: none; /* Hidden by default */
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  /*cursor: pointer; /* Add a pointer on hover */
-}
-#authorGoalEditorUI.visible {
-  display: block;
-}
-.author-goal-editor-inner {
-  background: white;
-  border-radius: 1rem;
-  left: 25%;
-  padding: 1rem;
-  position: relative;
-  top: 25%;
-  width: 50%;
-}
-.author-goal-editor-inner .author-goals {
-  display: flex;
-  flex-flow: row wrap;
-}
-.author-goal-editor-inner .author-goal {
-  background: #eee;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 0.5rem;
-}
-.author-goal-editor-inner .author-goal select {
-  margin-right: 0.5rem;
-}
-
-/* Tab styling */
-
-.tab {
-  overflow: hidden;
-  /*border: 1px solid #ccc;
-  background-color: #f1f1f1;*/
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
 }

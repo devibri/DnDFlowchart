@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Devi's GM Assistant</title>
-  <link rel="stylesheet" href="styles.css">
-  	<script src="sim/datascript-0.18.4.min.js" defer></script>
-  	<script src="sim/data/cast.js" defer></script>
-  	<script src="sim/data/info.js" defer></script>
-  	<script src="sim/data/locations.js" defer></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="sim/datascript-0.18.4.min.js" defer></script>
+	<script src="sim/data/cast.js" defer></script>
+	<script src="sim/data/info.js" defer></script>
+	<script src="sim/data/locations.js" defer></script>
 	<script src="sim/util.js" defer></script>
 	<script src="sim/sim.js" defer></script>
 	<script src="core.min.js"></script>
@@ -15,110 +15,100 @@
 	<script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-	  var config = {
-	    theme:'neutral',
-	    flowchart:{
-	      htmlLabels:true,
-	      curve:'basis',
-	    },
-	    startOnLoad: true,
-  		securityLevel: 'loose'
-	  };
-	  mermaid.initialize(config);
+		var config = {
+			theme:'neutral',
+			flowchart:{
+				htmlLabels:true,
+				curve:'basis',
+			},
+			startOnLoad: true,
+			securityLevel: 'loose'
+		};
+		mermaid.initialize(config);
 	</script>
 </head>
 <body>
-
 	<!-- colors: https://www.colourlovers.com/palette/2471430/Pastel_Marshmallows -->
 	<main> 
-			<!-- <div class="row">
-				<div class="column">
-					<div class="character-wrapper">
-						<div><strong>List of characters:</strong></div><br>
-						<div id="characterList">text</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="location-wrapper">
-						<div><strong>List of locations:</strong></div><br>
-						<div id="locationList">text</div>
-					</div>
-				</div>
-			</div> -->
-			<div class="mermaid">
-			    graph LR
-			    	StonehillInn[The Stonehill Inn]:::locclass-->ToblinStonehill{{Toblin Stonehill}}:::charclass
-			    	ToblinStonehill-->RedbrandHangout("<p>Redbrands hang out at Sleeping Giant Tap House and they are trouble</p>"):::infoclass
-			    	RedbrandHangout-->SleepingGiantTapHouse[Sleeping Giant tap house]:::locclass
-			    	StonehillInn[The Stonehill Inn]:::locclass-->Narth{{Narth}}:::charclass
-			    	Narth-->SisterGaraeleExhausted("<p>Sister Garaele recently returned to the Shrine of Luck injured and exhausted</p>"):::infoclass
-			    	SisterGaraeleExhausted-->ShrineOfLuck[Shrine of Luck]:::locclass
-			    	StonehillInn[The Stonehill Inn]:::locclass-->Elsa{{Elsa}}:::charclass
-			    	StonehillInn[The Stonehill Inn]:::locclass-->Lanar{{Lanar}}:::charclass
-			    	Lanar-->OrcsTriboarTrail("<p>The townmaster wants someone to deal with the orcs around Triboar Trail</p>"):::infoclass
-			    	StonehillInn[The Stonehill Inn]:::locclass-->Trilena{{Trilena}}:::charclass
-			    	Trilena-->DendrarFamilyKidnapped("<p>Thal Dendrar stood up to Redbrands; they killed him and kidnapped his family</p>"):::infoclass
-			    	StonehillInn[The Stonehill Inn]:::locclass-->Pip{{Pip}}:::charclass
-			    	Pip-->SecretTunnelKnowledge("<p>Carp at Alderleaf Farm saw a secret tunnel in the woods; the Redbrands almost caught him</p>"):::infoclass
-			    	SecretTunnelKnowledge-->AlderleafFarm[Alderleaf Farm]:::locclass
-			    	StonehillInn[The Stonehill Inn]:::locclass-->Freda{{Freda}}:::charclass
-			    	Freda-->RedbrandsAndHalia("<p>Redbrands don't mess with Halia at Phandalin Miner's Exchange</p>"):::infoclass
-			    	RedbrandsAndHalia-->PhandalinMinersExchange[Phandalin Miner's Exchange]:::locclass
-			    	LionshieldCoster[Lionshield Coster]:::locclass-->LineneGraywind{{Linene Graywind}}:::charclass
-			    	BarthensProvisions[Barthen's Provisions]:::locclass-->ElmarBarthen{{Elmar Barthen}}:::charclass
-			    	ElmarBarthen-->RedbrandShakedown("<p>The Redbrands are shaking down local businesses</p>"):::infoclass
-			    	BarthensProvisions[Barthen's Provisions]:::locclass-->Ander{{Ander}}:::charclass
-			    	BarthensProvisions[Barthen's Provisions]:::locclass-->Thistle{{Thistle}}:::charclass
-			    	TownmastersHall[Townmaster's Hall]:::locclass-->HarbinWester{{Harbin Wester}}:::charclass
-			    	HarbinWester-->OrcsTriboarTrail("<p>The townmaster wants someone to deal with the orcs around Triboar Trail</p>"):::infoclass
-			    	OrcsTriboarTrail-->OrcCamp[Orc Camp at Triboar Trail]:::locclass
-			    	HarbinWester-->TownmasterAndRedbrands("<p>Townmaster doesn't want players to mess with Redbrands, keep them in jail</p>"):::infoclass
-			    	ShrineOfLuck[Shrine of Luck]:::locclass-->SisterGaraele{{Sister Garaele}}:::charclass
-			    	SisterGaraele-->AskAgathaAboutBook("<p>QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location</p>"):::infoclass
-			    	AskAgathaAboutBook-->AgathasLair[Agatha's Lair]:::locclass
-			    	SleepingGiantTapHouse[Sleeping Giant tap house]:::locclass-->Grista{{Grista}}:::charclass
-			    	SleepingGiantTapHouse[Sleeping Giant tap house]:::locclass-->TheRedbrands{{The Redbrands}}:::charclass
-			    	EdermathOrchard[Edermath Orchard]:::locclass-->DarenEdermath{{Daren Edermath}}:::charclass
-			    	DarenEdermath-->RedbrandHideoutLocation("<p>The Redbrand hideout is at Tresendar Manor</p>"):::infoclass
-			    	DarenEdermath-->GetRidOfRedbrands("<p>Wants players to take out Redbrands</p>"):::infoclass
-			    	DarenEdermath-->DiggingOldOwlWell("<p>QUEST: There is undead and digging at Old Owl Well, used to be magical, want someone to investigate</p>"):::infoclass
-			    	DiggingOldOwlWell-->OldOwlWell[Old Owl Well]:::locclass
-			    	TresendarManor[Tresendar Manor]:::locclass-->RedbrandMinions{{Goblin Droop and Bugbears}}:::charclass
-			    	RedbrandMinions-->RedbrandMinionInfo("<p>You find some bugbears messing with a goblin, Droop. After defeating the bugbears you can interrogate them or get Droop to tell you the location of Cragmaw Castle</p>"):::infoclass
-			    	RedbrandMinionInfo-->CragmawCastle[Cragmaw Castle]:::locclass
-			    	OldOwlWell[Old Owl Well]:::locclass-->Hamun{{Hamun the Necromancer}}:::charclass
-			    	Hamun-->HamunQuest("<p>Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave</p>"):::infoclass
-			    	HamunQuest-->AgathasLair[Agatha's Lair]:::locclass
-			    	HamunQuest-->OrcCamp[Orc Camp at Triboar Trail]:::locclass
-			    	HamunQuest-->WaveEchoCave[Wave Echo Cave]:::locclass
-			    	PhandalinMinersExchange[Phandalin Miner's Exchange]:::locclass-->HaliaThornton{{Halia Thorton}}:::charclass
-			    	HaliaThornton-->GoblinCragmawCastle("<p>The goblin working for the Redbrands might know the way to Cragmaw Castle, will leverage this info to get players to accept her quest</p>"):::infoclass
-			    	GoblinCragmawCastle-->TresendarManor[Tresendar Manor]:::locclass
-			    	HaliaThornton-->KillRedbrandLeader("<p>QUEST: Kill the leader of the Redbrands, secretly so Halia can take over</p>"):::infoclass
-			    	KillRedbrandLeader-->TresendarManor[Tresendar Manor]:::locclass
-			    	AlderleafFarm[Alderleaf Farm]:::locclass-->QellineAlderleaf{{Qelline Alderleaf}}:::charclass
-			    	QellineAlderleaf-->ReidothLocation("<p>A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree</p>"):::infoclass
-			    	ReidothLocation-->Thundertree[Thundertree]:::locclass
-			    	AlderleafFarm[Alderleaf Farm]:::locclass-->Carp{{Carp}}:::charclass
-			    	Carp-->RedbrandHideoutLocation("<p>The Redbrand hideout is at Tresendar Manor</p>"):::infoclass
-			    	RedbrandHideoutLocation-->TresendarManor[Tresendar Manor]:::locclass
-			    	Carp-->SecretTunnelLocation("<p>The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor</p>"):::infoclass
-			    	SecretTunnelLocation-->TresendarManor[Tresendar Manor]:::locclass
-			    	Thundertree[Thundertree]:::locclass-->Reidoth{{Reidoth}}:::charclass
-			    	Reidoth-->GreenDragon("<p>Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle</p>"):::infoclass
-			    	GreenDragon-->WaveEchoCave[Wave Echo Cave]:::locclass
-			    	GreenDragon-->CragmawCastle[Cragmaw Castle]:::locclass
-			    	AgathasLair[Agatha's Lair]:::locclass-->Agatha{{Agatha the Banshee}}:::charclass
-			    	Agatha-->AgathaInfo("<p>If players are nice to Agatha or give her the comb, she can give them one piece of information</p>"):::infoclass
-			    	AgathaInfo-->WaveEchoCave[Wave Echo Cave]:::locclass
-			    	AgathaInfo-->CragmawCastle[Cragmaw Castle]:::locclass
-			    	OrcCamp[Orc Camp at Triboar Trail]:::locclass
-			    	CragmawCastle[Cragmaw Castle]:::locclass
-			    	WaveEchoCave[Wave Echo Cave]:::locclass
-					classDef locclass fill:#F6DD8B,stroke:#FFF;
-					classDef charclass fill:#FFA78E,stroke:#FFF;
-					classDef infoclass fill:#BCD6BB,stroke:#FFF;
+		<header>
+			<div class="links">
+				<a href="index.html">story info condensed</a>  |  story info expanded  |  <a href="index3.html">list of characters</a>
 			</div>
+		</header>
+		<div class="mermaid">
+			graph LR
+			StonehillInn[The Stonehill Inn]:::locclass-->ToblinStonehill{{Toblin Stonehill}}:::charclass
+			ToblinStonehill-->RedbrandHangout("<p>Redbrands hang out at Sleeping Giant Tap House and they are trouble</p>"):::infoclass
+			RedbrandHangout-->SleepingGiantTapHouse[Sleeping Giant tap house]:::locclass
+			StonehillInn[The Stonehill Inn]:::locclass-->Narth{{Narth}}:::charclass
+			Narth-->SisterGaraeleExhausted("<p>Sister Garaele recently returned to the Shrine of Luck injured and exhausted</p>"):::infoclass
+			SisterGaraeleExhausted-->ShrineOfLuck[Shrine of Luck]:::locclass
+			StonehillInn[The Stonehill Inn]:::locclass-->Elsa{{Elsa}}:::charclass
+			StonehillInn[The Stonehill Inn]:::locclass-->Lanar{{Lanar}}:::charclass
+			Lanar-->OrcsTriboarTrail("<p>The townmaster wants someone to deal with the orcs around Triboar Trail</p>"):::infoclass
+			StonehillInn[The Stonehill Inn]:::locclass-->Trilena{{Trilena}}:::charclass
+			Trilena-->DendrarFamilyKidnapped("<p>Thal Dendrar stood up to Redbrands; they killed him and kidnapped his family</p>"):::infoclass
+			StonehillInn[The Stonehill Inn]:::locclass-->Pip{{Pip}}:::charclass
+			Pip-->SecretTunnelKnowledge("<p>Carp at Alderleaf Farm saw a secret tunnel in the woods; the Redbrands almost caught him</p>"):::infoclass
+			SecretTunnelKnowledge-->AlderleafFarm[Alderleaf Farm]:::locclass
+			StonehillInn[The Stonehill Inn]:::locclass-->Freda{{Freda}}:::charclass
+			Freda-->RedbrandsAndHalia("<p>Redbrands don't mess with Halia at Phandalin Miner's Exchange</p>"):::infoclass
+			RedbrandsAndHalia-->PhandalinMinersExchange[Phandalin Miner's Exchange]:::locclass
+			LionshieldCoster[Lionshield Coster]:::locclass-->LineneGraywind{{Linene Graywind}}:::charclass
+			BarthensProvisions[Barthen's Provisions]:::locclass-->ElmarBarthen{{Elmar Barthen}}:::charclass
+			ElmarBarthen-->RedbrandShakedown("<p>The Redbrands are shaking down local businesses</p>"):::infoclass
+			BarthensProvisions[Barthen's Provisions]:::locclass-->Ander{{Ander}}:::charclass
+			BarthensProvisions[Barthen's Provisions]:::locclass-->Thistle{{Thistle}}:::charclass
+			TownmastersHall[Townmaster's Hall]:::locclass-->HarbinWester{{Harbin Wester}}:::charclass
+			HarbinWester-->OrcsTriboarTrail("<p>The townmaster wants someone to deal with the orcs around Triboar Trail</p>"):::infoclass
+			OrcsTriboarTrail-->OrcCamp[Orc Camp at Triboar Trail]:::locclass
+			HarbinWester-->TownmasterAndRedbrands("<p>Townmaster doesn't want players to mess with Redbrands, keep them in jail</p>"):::infoclass
+			ShrineOfLuck[Shrine of Luck]:::locclass-->SisterGaraele{{Sister Garaele}}:::charclass
+			SisterGaraele-->AskAgathaAboutBook("<p>QUEST: Go to Agatha's Lair with comb, ask Agatha the banshee about wizard book location</p>"):::infoclass
+			AskAgathaAboutBook-->AgathasLair[Agatha's Lair]:::locclass
+			SleepingGiantTapHouse[Sleeping Giant tap house]:::locclass-->Grista{{Grista}}:::charclass
+			SleepingGiantTapHouse[Sleeping Giant tap house]:::locclass-->TheRedbrands{{The Redbrands}}:::charclass
+			EdermathOrchard[Edermath Orchard]:::locclass-->DarenEdermath{{Daren Edermath}}:::charclass
+			DarenEdermath-->RedbrandHideoutLocation("<p>The Redbrand hideout is at Tresendar Manor</p>"):::infoclass
+			DarenEdermath-->GetRidOfRedbrands("<p>Wants players to take out Redbrands</p>"):::infoclass
+			DarenEdermath-->DiggingOldOwlWell("<p>QUEST: There is undead and digging at Old Owl Well, used to be magical, want someone to investigate</p>"):::infoclass
+			DiggingOldOwlWell-->OldOwlWell[Old Owl Well]:::locclass
+			TresendarManor[Tresendar Manor]:::locclass-->RedbrandMinions{{Goblin Droop and Bugbears}}:::charclass
+			RedbrandMinions-->RedbrandMinionInfo("<p>You find some bugbears messing with a goblin, Droop. After defeating the bugbears you can interrogate them or get Droop to tell you the location of Cragmaw Castle</p>"):::infoclass
+			RedbrandMinionInfo-->CragmawCastle[Cragmaw Castle]:::locclass
+			OldOwlWell[Old Owl Well]:::locclass-->Hamun{{Hamun the Necromancer}}:::charclass
+			Hamun-->HamunQuest("<p>Hamun wants you to get rid of the orc camp at Triboar Trail or ask Agatha about who made the magic tower in exchange for the location to Wave Echo Cave</p>"):::infoclass
+			HamunQuest-->AgathasLair[Agatha's Lair]:::locclass
+			HamunQuest-->OrcCamp[Orc Camp at Triboar Trail]:::locclass
+			HamunQuest-->WaveEchoCave[Wave Echo Cave]:::locclass
+			PhandalinMinersExchange[Phandalin Miner's Exchange]:::locclass-->HaliaThornton{{Halia Thorton}}:::charclass
+			HaliaThornton-->GoblinCragmawCastle("<p>The goblin working for the Redbrands might know the way to Cragmaw Castle, will leverage this info to get players to accept her quest</p>"):::infoclass
+			GoblinCragmawCastle-->TresendarManor[Tresendar Manor]:::locclass
+			HaliaThornton-->KillRedbrandLeader("<p>QUEST: Kill the leader of the Redbrands, secretly so Halia can take over</p>"):::infoclass
+			KillRedbrandLeader-->TresendarManor[Tresendar Manor]:::locclass
+			AlderleafFarm[Alderleaf Farm]:::locclass-->QellineAlderleaf{{Qelline Alderleaf}}:::charclass
+			QellineAlderleaf-->ReidothLocation("<p>A druid named Reidoth can help you find Cragmaw Castle or Wave Echo Cave; they are at ruins of Thundertree</p>"):::infoclass
+			ReidothLocation-->Thundertree[Thundertree]:::locclass
+			AlderleafFarm[Alderleaf Farm]:::locclass-->Carp{{Carp}}:::charclass
+			Carp-->RedbrandHideoutLocation("<p>The Redbrand hideout is at Tresendar Manor</p>"):::infoclass
+			RedbrandHideoutLocation-->TresendarManor[Tresendar Manor]:::locclass
+			Carp-->SecretTunnelLocation("<p>The Redbrand hideout has a secret tunnel entrance located near Tresendar Manor</p>"):::infoclass
+			SecretTunnelLocation-->TresendarManor[Tresendar Manor]:::locclass
+			Thundertree[Thundertree]:::locclass-->Reidoth{{Reidoth}}:::charclass
+			Reidoth-->GreenDragon("<p>Wants players to get rid of green dragon in Thundertree in exchange for info on Wave Echo Cave / Cragmaw Castle</p>"):::infoclass
+			GreenDragon-->WaveEchoCave[Wave Echo Cave]:::locclass
+			GreenDragon-->CragmawCastle[Cragmaw Castle]:::locclass
+			AgathasLair[Agatha's Lair]:::locclass-->Agatha{{Agatha the Banshee}}:::charclass
+			Agatha-->AgathaInfo("<p>If players are nice to Agatha or give her the comb, she can give them one piece of information</p>"):::infoclass
+			AgathaInfo-->WaveEchoCave[Wave Echo Cave]:::locclass
+			AgathaInfo-->CragmawCastle[Cragmaw Castle]:::locclass
+			OrcCamp[Orc Camp at Triboar Trail]:::locclass
+			CragmawCastle[Cragmaw Castle]:::locclass
+			WaveEchoCave[Wave Echo Cave]:::locclass
+			classDef locclass fill:#F6DD8B,stroke:#FFF;
+			classDef charclass fill:#FFA78E,stroke:#FFF;
+			classDef infoclass fill:#BCD6BB,stroke:#FFF;
+		</div>
 	</main>
 </body>
 </html>
