@@ -56,8 +56,8 @@ function getCharacterNameByTag(db, tag) {
   return datascript.q(`[:find ?n :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "name" ?n]]`, db);
 }
 
-function getCharacterInfoByTag(db, name) {
-  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "name" "${name}"] [?c "information" ?i]]`, db);
+function getCharacterInfoByTag(db, tag) {
+  return datascript.q(`[:find ?i :where [?c "type" "char"] [?c "tag" "${tag}"] [?c "information" ?i]]`, db);
 }
 
 function getCharacterFamilyByName(db, name) {
