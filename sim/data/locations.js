@@ -1,130 +1,160 @@
 var json_locations = `[
   {
     "tag": "StonehillInn", 
-    "fields": {
       "name": "The Stonehill Inn", 
       "known": true,
-      "NPCs": ["ToblinStonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"]
-    }
+      "NPCs": ["ToblinStonehill", "Narth", "Elsa", "Lanar", "Trilena", "Pip", "Freda"],
+      "region": "Phandalin",
+      "partyIsHere": true,
+      "visited": true
   },
   {
     "tag": "LionshieldCoster", 
-    "fields": {
       "name": "Lionshield Coster", 
       "known": true,
-      "NPCs": ["LineneGraywind"]
-    }
+      "NPCs": ["LineneGraywind"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
   },
   {
     "tag": "BarthensProvisions", 
-    "fields": {
       "name": "Barthen's Provisions", 
       "known": true,
-      "NPCs": ["ElmarBarthen", "Ander", "Thistle"]
-    }
+      "NPCs": ["ElmarBarthen", "Ander", "Thistle"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "TownmastersHall", 
-    "fields": {
       "name": "Townmaster's Hall", 
       "known": true,
-      "NPCs": ["HarbinWester"]
-    }
+      "NPCs": ["HarbinWester"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "ShrineOfLuck", 
-    "fields": {
       "name": "Shrine of Luck", 
       "known": true,
-      "NPCs": ["SisterGaraele"]
-    }
+      "NPCs": ["SisterGaraele"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "SleepingGiantTapHouse", 
-    "fields": {
       "name": "Sleeping Giant tap house", 
       "known": true,
-      "NPCs": ["Grista", "TheRedbrands"]
-    }
+      "NPCs": ["Grista", "TheRedbrands"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "EdermathOrchard", 
-    "fields": {
       "name": "Edermath Orchard", 
       "known": true,
-      "NPCs": ["DarenEdermath"]
-    }
+      "NPCs": ["DarenEdermath"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "TresendarManor", 
-    "fields": {
       "name": "Tresendar Manor", 
       "known": false,
-      "NPCs": ["RedbrandMinions"]
-    }
+      "NPCs": ["RedbrandMinions"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "OldOwlWell", 
-    "fields": {
       "name": "Old Owl Well", 
       "known": false,
-      "NPCs": ["Hamun"]
-    }
+      "NPCs": ["Hamun"],
+      "region": "countryside",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "PhandalinMinersExchange", 
-    "fields": {
       "name": "Phandalin Miner's Exchange", 
       "known": true,
-      "NPCs": ["HaliaThornton"]
-    }
+      "NPCs": ["HaliaThornton"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "AlderleafFarm", 
-    "fields": {
       "name": "Alderleaf Farm", 
       "known": true,
-      "NPCs": ["QellineAlderleaf", "Carp"]
-    }
+      "NPCs": ["QellineAlderleaf", "Carp"],
+      "region": "Phandalin",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "Thundertree", 
-    "fields": {
       "name": "Thundertree", 
       "known": false,
-      "NPCs": ["Reidoth"]
-    }
+      "NPCs": ["Reidoth"],
+      "region": "Thundertree",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "AgathasLair", 
-    "fields": {
       "name": "Agatha's Lair", 
       "known": false,
-      "NPCs": ["Agatha"]
-    }
+      "NPCs": ["Agatha"],
+      "region": "countryside",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "OrcCamp", 
-    "fields": {
       "name": "Orc Camp at Triboar Trail", 
       "known": true,
-      "NPCs": []
-    }
+      "NPCs": [],
+      "region": "countryside",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "CragmawCastle", 
-    "fields": {
       "name": "Cragmaw Castle", 
       "known": false,
-      "NPCs": []
-    }
+      "NPCs": [],
+      "region": "CragmawCastle",
+      "partyIsHere": false,
+      "visited": false
+    
   },
   {
     "tag": "WaveEchoCave", 
-    "fields": {
       "name": "Wave Echo Cave", 
       "known": false,
-      "NPCs": []
-    } 
+      "NPCs": [],
+      "region": "WaveEchoCave",
+      "partyIsHere": false,
+      "visited": false
+     
   }
 ]`

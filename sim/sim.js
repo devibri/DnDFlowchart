@@ -64,6 +64,10 @@ function getCharacterFamilyByName(db, name) {
   return datascript.q(`[:find ?f :where [?c "type" "char"] [?c "name" "${name}"] [?c "familyOf" ?f]]`, db);
 }
 
+function getCharacterMetByName(db, name) {
+  return datascript.q(`[:find ?m :where [?c "type" "char"] [?c "name" "${name}"] [?c "met" ?m]]`, db);
+}
+
 function getCharacterFriendsByName(db, name) {
   return datascript.q(`[:find ?f :where [?c "type" "char"] [?c "name" "${name}"] [?c "friendOf" ?f]]`, db);
 }
@@ -92,7 +96,43 @@ function getCharacterNameByInfoTag(db, tag) {
   return datascript.q(`[:find ?c :where [?c "type" "char"] [?i "tag" "${tag}"] [?c "information" ?i]]`, db);
 }
 
+function getLocationRegionByName(db, name) {
+  return datascript.q(`[:find ?r :where [?l "type" "loc"] [?l "name" "${name}"] [?l "region" ?r]]`, db);
+}
+
+function getLocationKnownByName(db, name) {
+  return datascript.q(`[:find ?k :where [?l "type" "loc"] [?l "name" "${name}"] [?l "known" ?k]]`, db);
+}
+
 function getStorylineByInfoTag(db, tag) {
+  return datascript.q(`[:find ?s :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "storyline" ?s]]`, db);
+}
+
+function getLocationPartyIsAt(db, name) {
+  return datascript.q(`[:find ?p :where [?l "type" "loc"] [?l "name" "${name}"] [?l "partyIsHere" ?p]]`, db);
+}
+
+function getLocationVisitedByName(db, name) {
+   return datascript.q(`[:find ?v :where [?l "type" "loc"] [?l "name" "${name}"] [?l "visited" ?v]]`, db);
+}
+
+function getInfoGoesToByTag(db, tag) {
+   return datascript.q(`[:find ?g :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "goesTo" ?g]]`, db);
+}
+
+function getInfoLocationsByTag(db, tag) {
+   return datascript.q(`[:find ?l :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "locations" ?l]]`, db);
+}
+
+function getInfoKnownByTag(db, tag) {
+  return datascript.q(`[:find ?k :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "known" ?k]]`, db);
+}
+
+function getInfoActedOnByTag(db, tag) {
+  return datascript.q(`[:find ?a :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "actedOn" ?a]]`, db);
+}
+
+function getInfoStorylineByTag(db, tag) {
   return datascript.q(`[:find ?s :where [?i "type" "info"] [?i "tag" "${tag}"] [?i "storyline" ?s]]`, db);
 }
 
@@ -103,13 +143,14 @@ function generateCharacter(db, i, castObjects) {
   const entity = {
     type: 'char',
     tag: `${char.tag}`,
-    name: `${char.fields.name}`,
-    occupation: `${char.fields.occupation}`,
-    faction:  `${char.fields.faction}`,
-    status:  `${char.fields.status}`,
-    information: `${char.fields.information}`,
-    familyOf: `${char.fields.familyOf}`,
-    friendOf: `${char.fields.friendOf}`
+    name: `${char.name}`,
+    occupation: `${char.occupation}`,
+    faction:  `${char.faction}`,
+    status:  `${char.status}`,
+    information: `${char.information}`,
+    familyOf: `${char.familyOf}`,
+    friendOf: `${char.friendOf}`, 
+    met: `${char.met}`
   };
   return createEntity(db, entity);
 }
@@ -119,9 +160,12 @@ function generateLocation(db, i, locations) {
   const entity = {
     type: 'loc', 
     tag: `${location.tag}`,
-    name: `${location.fields.name}`, 
-    known: `${location.fields.known}`,
-    NPCs: `${location.fields.NPCs}`
+    name: `${location.name}`, 
+    known: `${location.known}`,
+    NPCs: `${location.NPCs}`,
+    region: `${location.region}`,
+    partyIsHere: `${location.partyIsHere}`,
+    visited: `${location.visited}`
   }
   return createEntity(db, entity);
 }
@@ -131,11 +175,12 @@ function generateInfo(db, i, infoObjects) {
   const entity = {
     type: 'info', 
     tag: `${info.tag}`,
-    text: `${info.fields.text}`, 
-    known: `${info.fields.known}`,
-    locations: `${info.fields.locations}`,
-    goesTo: `${info.fields.goesTo}`,
-    storyline: `${info.fields.storyline}`
+    text: `${info.text}`, 
+    known: `${info.known}`,
+    actedOn: `${info.actedOn}`,
+    locations: `${info.locations}`,
+    goesTo: `${info.goesTo}`,
+    storyline: `${info.storyline}`
   }
   return createEntity(db, entity);
 }
@@ -208,6 +253,9 @@ return {
   getCharacterStatusByName: function(name) {
     return getCharacterStatusByName(gameDB, name);
   },
+  getCharacterMetByName: function(name) {
+    return getCharacterMetByName(gameDB, name);
+  },
   // Get a list of all location names.
   getAllLocationNames: function() {
     return getAllLocationNames(gameDB);
@@ -253,6 +301,41 @@ return {
   },
   getCharacterFriendsByName: function(name) {
     return getCharacterFriendsByName(gameDB, name)
+  },
+  getLocationRegionByName: function(name) {
+    return getLocationRegionByName(gameDB, name)
+  },
+
+  getLocationKnownByName: function(name) {
+    return getLocationKnownByName(gameDB, name)
+  },
+
+  getLocationPartyIsAt: function(name) {
+    return getLocationPartyIsAt(gameDB, name)
+  },
+
+  getLocationVisitedByName: function(name) {
+    return getLocationVisitedByName(gameDB, name)
+  },
+
+  getInfoGoesToByTag: function(tag) {
+    return getInfoGoesToByTag(gameDB, tag)
+  },
+
+  getInfoLocationsByTag: function(tag) {
+    return getInfoLocationsByTag(gameDB, tag)
+  },
+
+  getInfoKnownByTag: function(tag) {
+    return getInfoKnownByTag(gameDB, tag)
+  },
+
+  getInfoActedOnByTag: function(tag) {
+    return getInfoActedOnByTag(gameDB, tag)
+  },
+
+  getInfoStorylineByTag: function(tag) {
+    return getInfoStorylineByTag(gameDB, tag)
   }
 }
 

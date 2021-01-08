@@ -1,220 +1,221 @@
 var json_cast = `[
-  {
+         {
     "tag": "ToblinStonehill",
-    "fields": {
       "name": "Toblin Stonehill",
       "occupation": "Innkeeper",
       "status": "alive",
-      "information": ["RedbrandHangout"]
-    }
+      "information": ["RedbrandHangout"],
+      "met": true
+    
   },
   {
     "tag": "ElmarBarthen",
-    "fields": {
+    
       "name": "Elmar Barthen",
       "occupation": "Owns trading post",
       "status": "alive",
-      "information": ["RedbrandShakedown"]
-    }
+      "information": ["RedbrandShakedown"],
+      "met": false
+    
   },
   {
     "tag": "DarenEdermath",
-    "fields": {
       "name": "Daren Edermath",
       "occupation": "Retired adventurer",
       "faction": "Order of the Gauntlet",
       "status": "alive",
-      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
-    }
+      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"],
+      "met": false
+    
   },
   {
     "tag": "LineneGraywind",  
-    "fields": {
       "name": "Linene Graywind",
       "occupation": "Runs trading post",
       "status": "alive",
-      "information": []
-    }
+      "information": [],
+      "met": false
+    
   }, 
   {
     "tag": "HaliaThornton",
-    "fields": {
       "name": "Halia Thorton",
       "occupation": "Runs Phandalin Miner's Exchange",
       "faction": "Zhentarim",
       "status": "alive",
-      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"]
-    }
+      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"],
+      "met": false
+    
   },  
   {
     "tag": "QellineAlderleaf",
-    "fields": {
       "name": "Qelline Alderleaf",
       "occupation": "Halfling farmer",
       "status": "alive",
       "information": ["ReidothLocation"], 
       "familyOf": "Mother of Carp",
-      "friendOf": "Reidoth"
-    }
+      "friendOf": "Reidoth",
+      "met": false
+    
   },  
   {
    "tag": "SisterGaraele",
-   "fields": {
       "name": "Sister Garaele",
       "occupation": "Elf cleric of Tymora",
       "faction": "Harper",
       "status": "alive",
-      "information": ["AskAgathaAboutBook"]
-    }
+      "information": ["AskAgathaAboutBook"],
+      "met": false
+    
   },  
   {
    "tag": "HarbinWester",
-   "fields": {
     "name": "Harbin Wester",
     "occupation": "Townmaster of Phandalin",
     "status": "alive",
-    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
-    }
+    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"],
+    "met": false
+    
   },  
   {
    "tag": "SildarHallwinter",
-   "fields": {
     "name": "Sildar Hallwinter",
     "faction": "Lords' Alliance",
     "status": "alive",
-    "information": ["MissingIarno"]
-    }
+    "information": ["MissingIarno"],
+    "met": true
+    
   }, 
   {
    "tag": "Narth",
-   "fields": {
     "name": "Narth",
     "occupation": "Farmer",
     "status": "alive",
-    "information": ["SisterGaraeleExhausted"]
-    }
+    "information": ["SisterGaraeleExhausted"],
+    "met": false
+    
   },
   {
    "tag": "TheRedbrands",
-   "fields": {
     "name": "The Redbrands",
     "faction": "Redbrands",
     "status": "alive",
-    "information": []
-    }
+    "information": [],
+    "met": false
+    
   },
   {
    "tag": "Elsa",
-   "fields": {
     "name": "Elsa",
     "status": "alive",
-    "information": []
-    }
+    "information": [],
+    "met": false
+    
   },
   {
    "tag": "Lanar",
-   "fields": {
     "name": "Lanar",
     "status": "alive",
-    "information": ["OrcsTriboarTrail"]
-    }
+    "information": ["OrcsTriboarTrail"],
+    "met": false
+    
   },
   {
    "tag": "Trilena",
-   "fields": {
     "name": "Trilena",
     "status": "alive",
-    "information": ["DendrarFamilyKidnapped"]
-    }
+    "information": ["DendrarFamilyKidnapped"],
+    "met": false
+    
   },
   {
    "tag": "Pip",
-   "fields": {
     "name": "Pip",
     "status": "alive",
     "information": ["SecretTunnelKnowledge"], 
-    "friendOf": "Carp"
-    }
+    "friendOf": "Carp",
+    "met": false
+    
   },
   {
    "tag": "Freda",
-   "fields": {
     "name": "Freda",
     "status": "alive",
-    "information": ["RedbrandsAndHalia"]
-    }
+    "information": ["RedbrandsAndHalia"],
+    "met": false
+    
   },
   {
    "tag": "Ander",
-   "fields": {
     "name": "Ander",
     "status": "alive",
-    "information": []
-    }
+    "information": [],
+    "met": false
+    
   },
   {
    "tag": "Thistle",
-   "fields": {
     "name": "Thistle",
     "status": "alive",
-    "information": []
-    }
+    "information": [],
+    "met": false
+    
   },
   {
    "tag": "Grista",
-   "fields": {
     "name": "Grista",
     "status": "alive",
-    "information": []
-    }
+    "information": [],
+    "met": false
+    
   },
   {
    "tag": "Carp",
-   "fields": {
     "name": "Carp",
     "status": "alive",
     "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"],
-    "familyOf": "Child of Qelline Alderleaf"
-    }
+    "familyOf": "Child of Qelline Alderleaf",
+    "met": false
+    
   },
   {
    "tag": "Agatha",
-   "fields": {
     "name": "Agatha the Banshee",
     "status": "alive",
-    "information": ["AgathaInfo"]
-    }
+    "information": ["AgathaInfo"],
+    "met": false
+    
   },
   {
    "tag": "Reidoth",
-   "fields": {
     "name": "Reidoth",
     "status": "alive",
-    "information": ["GreenDragon"]
-    }
+    "information": ["GreenDragon"],
+    "met": false
+    
   },
   {
    "tag": "GundrenRockseeker",
-   "fields": {
     "name": "Gundren Rockseeker",
     "status": "alive",
-    "information": ["WaveEchoCaveMap"]
-    }
+    "information": ["WaveEchoCaveMap"],
+    "met": false
+    
   },
   {
    "tag": "Hamun",
-   "fields": {
     "name": "Hamun the Necromancer",
     "status": "alive",
-    "information": ["HamunQuest", "FinishHamunQuest"]
-    }
+    "information": ["HamunQuest", "FinishHamunQuest"],
+    "met": false
+    
   },
   {
    "tag": "RedbrandMinions",
-   "fields": {
     "name": "Goblin Droop and Bugbears",
     "status": "alive",
-    "information": ["RedbrandMinionInfo"]
-    }
+    "information": ["RedbrandMinionInfo"],
+    "met": false
+    
   }
-]`
+         ]`
